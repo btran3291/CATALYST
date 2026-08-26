@@ -1,0 +1,5102 @@
+[
+  {
+    "cik": "0001780312",
+    "name": "AST SpaceMobile, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001819994",
+    "name": "Rocket Lab Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001836833",
+    "name": "Planet Labs PBC",
+    "status_events": []
+  },
+  {
+    "cik": "0001753539",
+    "name": "BlackSky Technology Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001781162",
+    "name": "Momentus Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001843388",
+    "name": "Virgin Orbit Holdings, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-04-04",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-05-02",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001814329",
+    "name": "Astra Space, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-07-18",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001835512",
+    "name": "Terran Orbital Corp",
+    "status_events": [
+      {
+        "effective_date": "2024-10-30",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001915403",
+    "name": "SatixFy Communications Ltd.",
+    "status_events": [
+      {
+        "effective_date": "2025-07-02",
+        "status": "acquired"
+      }
+    ]
+  },
+  {
+    "cik": "0001567514",
+    "name": "Intra-Cellular Therapies, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000850261",
+    "name": "Sorrento Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-02-13",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-04-12",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001300699",
+    "name": "Athenex, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-05-14",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-07-10",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001497504",
+    "name": "PLx Pharma Winddown Corp.",
+    "status_events": [
+      {
+        "effective_date": "2023-04-13",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-05-02",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0000003116",
+    "name": "Akorn Inc",
+    "status_events": [
+      {
+        "effective_date": "2020-05-20",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2020-06-09",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001301501",
+    "name": "Achaogen, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2019-04-15",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2019-05-02",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001516479",
+    "name": "Insys Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2019-06-10",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2019-06-24",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001466301",
+    "name": "Clovis Oncology, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2022-12-11",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2022-12-29",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001593034",
+    "name": "Endo International plc",
+    "status_events": [
+      {
+        "effective_date": "2022-08-16",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2022-09-14",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001008848",
+    "name": "Acorda Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-04-01",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2024-04-25",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0000881524",
+    "name": "VIVUS, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2020-07-07",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2020-08-11",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001169245",
+    "name": "PhaseBio Pharmaceuticals, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2022-10-23",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2022-12-21",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001183765",
+    "name": "Molecular Templates, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2025-04-20",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2025-05-22",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001113148",
+    "name": "Infinity Pharmaceuticals, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-09-29",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-11-20",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0000057725",
+    "name": "Lannett Company, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-05-02",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-05-04",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0000352998",
+    "name": "Teligent, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2021-10-14",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2021-10-27",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001382911",
+    "name": "Orexigen Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2018-03-12",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2018-06-06",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001461993",
+    "name": "Melinta Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2019-12-27",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2020-02-05",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001595585",
+    "name": "Tricida, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-01-11",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-03-03",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001347613",
+    "name": "Synergy Pharmaceuticals Inc.",
+    "status_events": [
+      {
+        "effective_date": "2018-12-12",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2019-05-02",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001368148",
+    "name": "Athersys, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-01-05",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-12-27",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001293310",
+    "name": "Humanigen, Inc. (formerly KaloBios Pharmaceuticals)",
+    "status_events": [
+      {
+        "effective_date": "2015-12-29",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2016-01-26",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2024-01-03",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-10-12",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001587221",
+    "name": "Zosano Pharma Corp",
+    "status_events": [
+      {
+        "effective_date": "2022-06-01",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2022-07-19",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001478069",
+    "name": "ContraFect Corp",
+    "status_events": [
+      {
+        "effective_date": "2023-12-04",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-12-27",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001305253",
+    "name": "Eiger BioPharmaceuticals, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-04-01",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2024-04-25",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001600847",
+    "name": "Gamida Cell Ltd.",
+    "status_events": [
+      {
+        "effective_date": "2024-04-22",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2024-04-25",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001656634",
+    "name": "Gritstone bio, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-10-10",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2025-03-05",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001659352",
+    "name": "Codiak BioSciences, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-03-27",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-05-02",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001624658",
+    "name": "Allena Pharmaceuticals, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2022-09-02",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2022-09-14",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0000002186",
+    "name": "BK Technologies Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0000023197",
+    "name": "COMTECH TELECOMMUNICATIONS CORP /DE/",
+    "status_events": []
+  },
+  {
+    "cik": "0000068505",
+    "name": "Motorola Solutions, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000202058",
+    "name": "L3HARRIS TECHNOLOGIES, INC. /DE/",
+    "status_events": []
+  },
+  {
+    "cik": "0000717826",
+    "name": "ERICSSON LM TELEPHONE CO",
+    "status_events": []
+  },
+  {
+    "cik": "0000720762",
+    "name": "NON INVASIVE MONITORING SYSTEMS INC /FL/",
+    "status_events": []
+  },
+  {
+    "cik": "0000790273",
+    "name": "CONECTISYS CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0000804328",
+    "name": "QUALCOMM INC/DE",
+    "status_events": []
+  },
+  {
+    "cik": "0000851310",
+    "name": "HARMONIC INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000879911",
+    "name": "APPLIED ENERGETICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000897322",
+    "name": "GILAT SATELLITE NETWORKS LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0000914139",
+    "name": "PARKERVISION INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000924613",
+    "name": "NOKIA CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0000926423",
+    "name": "MIND TECHNOLOGY, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000932021",
+    "name": "GLOBAL TECHNOLOGIES LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0000936468",
+    "name": "LOCKHEED MARTIN CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0001069258",
+    "name": "KRATOS DEFENSE & SECURITY SOLUTIONS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001094285",
+    "name": "TELEDYNE TECHNOLOGIES INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001119769",
+    "name": "CERAGON NETWORKS LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001121788",
+    "name": "GARMIN LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001128252",
+    "name": "SIPP International Industries, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001133421",
+    "name": "NORTHROP GRUMMAN CORP /DE/",
+    "status_events": []
+  },
+  {
+    "cik": "0001272842",
+    "name": "AIRGAIN INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001334325",
+    "name": "Coda Octopus Group, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001342958",
+    "name": "KUSTOM ENTERTAINMENT, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001377149",
+    "name": "CareView Communications Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001377789",
+    "name": "AVIAT NETWORKS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001463972",
+    "name": "Vuzix Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001511737",
+    "name": "Ubiquiti Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001517228",
+    "name": "Vistance Networks, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001575793",
+    "name": "Energous Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001646188",
+    "name": "Ondas Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001738177",
+    "name": "Cambium Networks Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001788060",
+    "name": "Voyager Technologies, Inc./TX",
+    "status_events": []
+  },
+  {
+    "cik": "0001819810",
+    "name": "Redwire Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001833756",
+    "name": "Leonardo DRS, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001844452",
+    "name": "Intuitive Machines, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001857047",
+    "name": "MDA Space Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001860160",
+    "name": "Firefly Aerospace Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001865631",
+    "name": "NEXTNAV INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001874315",
+    "name": "Satellogic Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001919776",
+    "name": "LIBERTY DEFENSE HOLDINGS, LTD.",
+    "status_events": []
+  },
+  {
+    "cik": "0001953988",
+    "name": "Helio Corp /FL/",
+    "status_events": []
+  },
+  {
+    "cik": "0001956955",
+    "name": "Unusual Machines, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002086587",
+    "name": "York Space Systems Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002111860",
+    "name": "Xtend AI Robotics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002132582",
+    "name": "Lyntris Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000001800",
+    "name": "ABBOTT LABORATORIES",
+    "status_events": []
+  },
+  {
+    "cik": "0000014272",
+    "name": "BRISTOL MYERS SQUIBB CO",
+    "status_events": []
+  },
+  {
+    "cik": "0000025743",
+    "name": "TherapeuticsMD, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000034956",
+    "name": "TENAX THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000059478",
+    "name": "ELI LILLY & Co",
+    "status_events": []
+  },
+  {
+    "cik": "0000072444",
+    "name": "Vaxart, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000078003",
+    "name": "PFIZER INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000109657",
+    "name": "GT Biopharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000200406",
+    "name": "JOHNSON & JOHNSON",
+    "status_events": []
+  },
+  {
+    "cik": "0000275053",
+    "name": "NATURES SUNSHINE PRODUCTS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000310158",
+    "name": "Merck & Co., Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000315545",
+    "name": "PROVECTUS BIOPHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000318154",
+    "name": "AMGEN INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000318306",
+    "name": "ABEONA THERAPEUTICS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000320017",
+    "name": "LISATA THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000353278",
+    "name": "NOVO NORDISK A S",
+    "status_events": []
+  },
+  {
+    "cik": "0000715446",
+    "name": "Anixa Biosciences Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0000725363",
+    "name": "CEL SCI CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0000727510",
+    "name": "Viskase Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000728387",
+    "name": "Perspective Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000730272",
+    "name": "REPLIGEN CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0000748592",
+    "name": "Ernexa Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000749647",
+    "name": "Imunon, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000771856",
+    "name": "CHAMPIONS ONCOLOGY, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000797564",
+    "name": "HST Global, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000812306",
+    "name": "PROCYON CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0000812796",
+    "name": "SOLIGENIX, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000818033",
+    "name": "HERON THERAPEUTICS, INC. /DE/",
+    "status_events": []
+  },
+  {
+    "cik": "0000818686",
+    "name": "TEVA PHARMACEUTICAL INDUSTRIES LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0000822370",
+    "name": "Emmaus Life Sciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000832489",
+    "name": "GeoVax Labs, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000836564",
+    "name": "Mosaic ImmunoEngineering Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000842023",
+    "name": "BIO-TECHNE Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0000849146",
+    "name": "Lifevantage Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0000863894",
+    "name": "VERU INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000868278",
+    "name": "ProPhase Labs, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000872589",
+    "name": "REGENERON PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000873303",
+    "name": "Sarepta Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000874015",
+    "name": "IONIS PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000875045",
+    "name": "BIOGEN INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000875320",
+    "name": "VERTEX PHARMACEUTICALS INC / MA",
+    "status_events": []
+  },
+  {
+    "cik": "0000876343",
+    "name": "Lineage Cell Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000879407",
+    "name": "ARROWHEAD PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000882095",
+    "name": "GILEAD SCIENCES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000882796",
+    "name": "BIOCRYST PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000885590",
+    "name": "Bausch Health Companies Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000886163",
+    "name": "LIGAND PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000886744",
+    "name": "GERON CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0000887359",
+    "name": "Vericel Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0000890725",
+    "name": "GELSTAT CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0000890821",
+    "name": "Enveric Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000894158",
+    "name": "Theriva Biologics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000897448",
+    "name": "AMARIN CORP PLC\\UK",
+    "status_events": []
+  },
+  {
+    "cik": "0000899460",
+    "name": "MANNKIND CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0000901832",
+    "name": "ASTRAZENECA PLC",
+    "status_events": []
+  },
+  {
+    "cik": "0000906709",
+    "name": "NEKTAR THERAPEUTICS",
+    "status_events": []
+  },
+  {
+    "cik": "0000907654",
+    "name": "Oruka Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000908259",
+    "name": "Oncotelic Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000911216",
+    "name": "PALATIN TECHNOLOGIES INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000914475",
+    "name": "NEUROCRINE BIOSCIENCES INC",
+    "status_events": []
+  },
+  {
+    "cik": "0000921114",
+    "name": "Armata Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000921299",
+    "name": "KYNTRA BIO, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000925741",
+    "name": "BioCardia, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000939767",
+    "name": "EXELIXIS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000944809",
+    "name": "OPKO HEALTH, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0000946486",
+    "name": "WINDTREE THERAPEUTICS INC /DE/",
+    "status_events": []
+  },
+  {
+    "cik": "0000946644",
+    "name": "AIM ImmunoTech Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001000694",
+    "name": "NOVAVAX INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001001233",
+    "name": "SANGAMO THERAPEUTICS, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001001316",
+    "name": "TG THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001005286",
+    "name": "LIFECORE BIOMEDICAL, INC. DE",
+    "status_events": []
+  },
+  {
+    "cik": "0001006281",
+    "name": "Protalix BioTherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001010086",
+    "name": "SIGA TECHNOLOGIES INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001015820",
+    "name": "QIAGEN N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001016504",
+    "name": "INTEGRATED BIOPHARMA INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001022899",
+    "name": "Protagenic Therapeutics, Inc.\\new",
+    "status_events": []
+  },
+  {
+    "cik": "0001023024",
+    "name": "ANI PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001023549",
+    "name": "XTL BIOPHARMACEUTICALS LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001034842",
+    "name": "RIGEL PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001035354",
+    "name": "Eloxx Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001035422",
+    "name": "CTT PHARMACEUTICAL HOLDINGS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001041024",
+    "name": "ROCKWELL MEDICAL, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001042418",
+    "name": "Inhibitor Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001048477",
+    "name": "BIOMARIN PHARMACEUTICAL INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001053369",
+    "name": "ELITE PHARMACEUTICALS INC /NV/",
+    "status_events": []
+  },
+  {
+    "cik": "0001053691",
+    "name": "CervoMed Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001055726",
+    "name": "INOVIO PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001061983",
+    "name": "CYTOKINETICS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001062822",
+    "name": "LEXICON PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001069530",
+    "name": "FILANA THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001069899",
+    "name": "PHIBRO ANIMAL HEALTH CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0001070081",
+    "name": "PTC THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001070494",
+    "name": "ACADIA PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001072379",
+    "name": "NORTHWEST BIOTHERAPEUTICS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001075880",
+    "name": "KAZIA THERAPEUTICS LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001080014",
+    "name": "Innoviva, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001081938",
+    "name": "CANNAPHARMARX, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001082554",
+    "name": "UNITED THERAPEUTICS Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001084201",
+    "name": "SINOVAC BIOTECH LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001085277",
+    "name": "SKINVISIBLE, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001087294",
+    "name": "CUMBERLAND PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001088856",
+    "name": "CORCEPT THERAPEUTICS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001091326",
+    "name": "SB Technology Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001094038",
+    "name": "Marker Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001098009",
+    "name": "America Great Health",
+    "status_events": []
+  },
+  {
+    "cik": "0001098972",
+    "name": "AGENUS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001101026",
+    "name": "Zivo Bioscience, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001104506",
+    "name": "INSMED Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001106644",
+    "name": "CHINA PHARMA HOLDINGS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001107421",
+    "name": "Alaunos Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001108205",
+    "name": "CURIS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001114448",
+    "name": "NOVARTIS AG",
+    "status_events": []
+  },
+  {
+    "cik": "0001119774",
+    "name": "COMPUGEN LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001121404",
+    "name": "Sanofi",
+    "status_events": []
+  },
+  {
+    "cik": "0001124105",
+    "name": "GYRE THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001124524",
+    "name": "Cryoport, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001125345",
+    "name": "MACROGENICS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001128189",
+    "name": "ProtoKinetix, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001129928",
+    "name": "ONCOLYTICS BIOTECH INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001130598",
+    "name": "Traws Pharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001131343",
+    "name": "ALTERITY THERAPEUTICS LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001131399",
+    "name": "GSK plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001133416",
+    "name": "GALECTIN THERAPEUTICS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001133519",
+    "name": "MEDICURE INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001133818",
+    "name": "BIO-PATH HOLDINGS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001133869",
+    "name": "CAPRICOR THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001135951",
+    "name": "DR REDDYS LABORATORIES LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001137883",
+    "name": "BRAINSTORM CELL THERAPEUTICS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001145604",
+    "name": "NIKA PHARMACEUTICALS, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001157075",
+    "name": "PharmaCyte Biotech, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001157601",
+    "name": "MADRIGAL PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001158780",
+    "name": "Pluri Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001159036",
+    "name": "HALOZYME THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001160308",
+    "name": "Savara Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001162194",
+    "name": "STANDARD BIOTOOLS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001173313",
+    "name": "ABVC BIOPHARMA, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001174940",
+    "name": "ORAGENICS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001175680",
+    "name": "CytoDyn Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001176309",
+    "name": "ORAMED PHARMACEUTICALS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001177648",
+    "name": "ENANTA PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001178253",
+    "name": "SCYNEXIS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001178670",
+    "name": "ALNYLAM PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001187953",
+    "name": "CREATIVE MEDICAL TECHNOLOGY HOLDINGS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001191070",
+    "name": "Neuphoria Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001205922",
+    "name": "VACCINEX, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001211583",
+    "name": "FENNEC PHARMACEUTICALS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001213037",
+    "name": "Cardiff Oncology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001213809",
+    "name": "DYADIC INTERNATIONAL INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001226616",
+    "name": "MEDICINOVA INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001228627",
+    "name": "Opus Genetics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001231457",
+    "name": "GENELUX Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001232524",
+    "name": "Jazz Pharmaceuticals plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001253689",
+    "name": "CRESCENT BIOPHARMA, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001262104",
+    "name": "Lite Strategy, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001265521",
+    "name": "Polomar Health Services, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001267565",
+    "name": "COLLEGIUM PHARMACEUTICAL, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001279704",
+    "name": "Cellectar Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001280776",
+    "name": "IMMUNIC, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001281895",
+    "name": "ROCKET PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001285819",
+    "name": "OMEROS CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0001295947",
+    "name": "Prestige Consumer Healthcare Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001297184",
+    "name": "Amphastar Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001314052",
+    "name": "ANAVEX LIFE SCIENCES CORP.",
+    "status_events": []
+  },
+  {
+    "cik": "0001326110",
+    "name": "ImmunityBio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001326190",
+    "name": "Altimmune, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001326205",
+    "name": "IGC Pharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001326732",
+    "name": "Xencor Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001335105",
+    "name": "NOMAD POWER SOLUTIONS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001339970",
+    "name": "aTYR PHARMA INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001341235",
+    "name": "Aldeyra Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001343009",
+    "name": "CNBX Pharmaceuticals Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001345099",
+    "name": "MESOBLAST LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001346830",
+    "name": "Tvardi Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001347178",
+    "name": "Vanda Pharmaceuticals Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001347242",
+    "name": "LIPELLA PHARMACEUTICALS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001348362",
+    "name": "Lexaria Bioscience Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001355736",
+    "name": "Avricore Health Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001355790",
+    "name": "International Stem Cell CORP",
+    "status_events": []
+  },
+  {
+    "cik": "0001356090",
+    "name": "PRECIGEN, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001356576",
+    "name": "SUPERNUS PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001357459",
+    "name": "PALISADE BIO, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001357874",
+    "name": "PRECISION BIOSCIENCES INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001359931",
+    "name": "Protara Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001360214",
+    "name": "HARROW, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001367644",
+    "name": "Emergent BioSolutions Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001368514",
+    "name": "ADMA BIOLOGICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001370053",
+    "name": "ANAPTYSBIO, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001372299",
+    "name": "Ocugen, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001372514",
+    "name": "KIORA PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001374339",
+    "name": "ProMIS Neurosciences Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001374690",
+    "name": "Larimar Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001377121",
+    "name": "Protagonist Therapeutics, Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001379006",
+    "name": "NANOVIRICIDES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001382101",
+    "name": "SUTRO BIOPHARMA, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001382574",
+    "name": "Scienture Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001385818",
+    "name": "AYTU BIOPHARMA, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001388320",
+    "name": "Actinium Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001390478",
+    "name": "SELLAS Life Sciences Group, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001391135",
+    "name": "LFTD PARTNERS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001392449",
+    "name": "Green Planet Bio Engineering Co. Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001393434",
+    "name": "OCULAR THERAPEUTIX, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001395064",
+    "name": "TAKEDA PHARMACEUTICAL CO LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001395937",
+    "name": "Syndax Pharmaceuticals Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001396814",
+    "name": "Pacira BioSciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001398733",
+    "name": "Aquestive Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001400118",
+    "name": "Sagimet Biosciences Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001400271",
+    "name": "Curative Biotechnology Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001401040",
+    "name": "DiaMedica Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001401667",
+    "name": "PUMA BIOTECHNOLOGY, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001401914",
+    "name": "Dare Bioscience, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001402328",
+    "name": "Sunshine Biopharma Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001404281",
+    "name": "Eledon Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001404644",
+    "name": "Neurogene Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001408443",
+    "name": "Milestone Pharmaceuticals Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001409197",
+    "name": "Bespoke Extracts, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001410098",
+    "name": "CorMedix Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001411685",
+    "name": "Vistagen Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001412486",
+    "name": "Cocrystal Pharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001412558",
+    "name": "Evotec SE",
+    "status_events": []
+  },
+  {
+    "cik": "0001419041",
+    "name": "Forte Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001420565",
+    "name": "Rein Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001420720",
+    "name": "iBio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001421642",
+    "name": "Satellos Bioscience Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001421876",
+    "name": "Lakefront Biotherapeutics NV",
+    "status_events": []
+  },
+  {
+    "cik": "0001422142",
+    "name": "Whitehawk Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001422143",
+    "name": "Kura Oncology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001425205",
+    "name": "IOVANCE BIOTHERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001426800",
+    "name": "ASSEMBLY BIOSCIENCES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001427570",
+    "name": "Vyome Holdings, Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001427925",
+    "name": "TALPHERA, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001429260",
+    "name": "Fortress Biotech, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001430306",
+    "name": "Tonix Pharmaceuticals Holding Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001434265",
+    "name": "GENMAB A/S",
+    "status_events": []
+  },
+  {
+    "cik": "0001434316",
+    "name": "FATE THERAPEUTICS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001434647",
+    "name": "ZEVRA THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001437402",
+    "name": "ARDELYX, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001438533",
+    "name": "Travere Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001438569",
+    "name": "Grifols SA",
+    "status_events": []
+  },
+  {
+    "cik": "0001439222",
+    "name": "AGIOS PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001444192",
+    "name": "Grace Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001445815",
+    "name": "BIOXYTRAN, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001446847",
+    "name": "IRONWOOD PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001447028",
+    "name": "Arbutus Biopharma Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001452804",
+    "name": "Retrieve Medical Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001453687",
+    "name": "Cartesian Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001455365",
+    "name": "COGNITION THERAPEUTICS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001464165",
+    "name": "BetterLife Pharma Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001468639",
+    "name": "Vicapsys Life Sciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001468748",
+    "name": "Kodiak Sciences Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001472012",
+    "name": "Immunome Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001472091",
+    "name": "PDS Biotechnology Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001477845",
+    "name": "Annovis Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001478320",
+    "name": "Adaptive Biotechnologies Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001479419",
+    "name": "KALA BIO, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001479615",
+    "name": "Silence Therapeutics plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001488039",
+    "name": "ATOSSA THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001490978",
+    "name": "Schrodinger, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001497253",
+    "name": "VivoSim Labs, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001498382",
+    "name": "TuHURA Biosciences, Inc./NV",
+    "status_events": []
+  },
+  {
+    "cik": "0001498403",
+    "name": "BioLineRx Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001501697",
+    "name": "X4 Pharmaceuticals, Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001501796",
+    "name": "Aura Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001501989",
+    "name": "CytomX Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001503802",
+    "name": "Karyopharm Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001506184",
+    "name": "IMMUTEP Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001506251",
+    "name": "Citius Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001509261",
+    "name": "Rezolute, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001509745",
+    "name": "CYPHERPUNK TECHNOLOGIES INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001510964",
+    "name": "CV Sciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001512762",
+    "name": "Coherus Oncology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001513525",
+    "name": "ADIAL PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001514183",
+    "name": "Silo Pharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001514946",
+    "name": "AXIM BIOTECHNOLOGIES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001515673",
+    "name": "Ultragenyx Pharmaceutical Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001516551",
+    "name": "Skye Bioscience, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001517022",
+    "name": "Akebia Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001517681",
+    "name": "Propanc Biopharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001520262",
+    "name": "Alkermes plc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001526119",
+    "name": "Verastem, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001527599",
+    "name": "SYNLOGIC, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001527728",
+    "name": "Lunai Bioworks Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001528115",
+    "name": "Annexon, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001530746",
+    "name": "Kaya Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001533040",
+    "name": "Phio Pharmaceuticals Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001533743",
+    "name": "Processa Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001534120",
+    "name": "Avalo Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001534133",
+    "name": "CalciMedica, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001534248",
+    "name": "Chemomab Therapeutics Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001534525",
+    "name": "Xenetic Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001535955",
+    "name": "Lipocine Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001536196",
+    "name": "Can-Fite BioPharma Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001538495",
+    "name": "Earth Science Tech, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001540159",
+    "name": "Edesa Biotech, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001540171",
+    "name": "Avalyn Pharma Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001541157",
+    "name": "Akari Therapeutics Plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001544227",
+    "name": "Tempest Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001549595",
+    "name": "Nurix Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001551152",
+    "name": "AbbVie Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001553643",
+    "name": "RELMADA THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001553846",
+    "name": "RedHill Biopharma Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001555280",
+    "name": "Zoetis Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001557376",
+    "name": "Zeo ScientifiX, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001557746",
+    "name": "Aclaris Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001559053",
+    "name": "PROTHENA CORP PUBLIC LTD CO",
+    "status_events": []
+  },
+  {
+    "cik": "0001563880",
+    "name": "Trevi Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001566044",
+    "name": "Yarrow Bioscience, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001567264",
+    "name": "INTENSITY THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001567529",
+    "name": "KAMADA LTD",
+    "status_events": []
+  },
+  {
+    "cik": "0001568628",
+    "name": "Bioquest Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001569340",
+    "name": "Cell Source, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001570562",
+    "name": "Evolus, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001574094",
+    "name": "RenovoRx, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001574232",
+    "name": "Addex Therapeutics Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001574235",
+    "name": "Pulmatrix, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001575142",
+    "name": "BIOADAPTIVES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001576885",
+    "name": "Acumen Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001579428",
+    "name": "Axsome Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001580149",
+    "name": "BIOVIE INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001581178",
+    "name": "EUPRAXIA PHARMACEUTICALS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001581280",
+    "name": "Twist Bioscience Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001582313",
+    "name": "Xenon Pharmaceuticals Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001582554",
+    "name": "Matinas BioPharma Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001583107",
+    "name": "Theravance Biopharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001583648",
+    "name": "PALVELLA THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001583771",
+    "name": "Hepion Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001585364",
+    "name": "PERRIGO Co plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001585608",
+    "name": "Jaguar Health, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001589150",
+    "name": "Regen BioPharma Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001590560",
+    "name": "uniQure N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001590750",
+    "name": "Viridian Therapeutics, Inc.\\DE",
+    "status_events": []
+  },
+  {
+    "cik": "0001590877",
+    "name": "REGENXBIO Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001593899",
+    "name": "Atea Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001595097",
+    "name": "Corbus Pharmaceuticals Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001595248",
+    "name": "Genprex, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001595353",
+    "name": "Galmed Pharmaceuticals Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001596812",
+    "name": "Enlivex Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001598599",
+    "name": "Innate Pharma SA",
+    "status_events": []
+  },
+  {
+    "cik": "0001598646",
+    "name": "Minerva Neurosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001599298",
+    "name": "Summit Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001600620",
+    "name": "Aurinia Pharmaceuticals Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001601485",
+    "name": "Elicio Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001601830",
+    "name": "RECURSION PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001601936",
+    "name": "Altamira Therapeutics Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001603345",
+    "name": "Agentix Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001604464",
+    "name": "Atara Biotherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001607678",
+    "name": "Viking Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001609809",
+    "name": "Seres Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001610820",
+    "name": "BriaCell Therapeutics Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001611746",
+    "name": "SciSparc Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001611747",
+    "name": "Scinai Immunotherapeutics Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001612042",
+    "name": "Ascendis Pharma A/S",
+    "status_events": []
+  },
+  {
+    "cik": "0001612940",
+    "name": "ProQR Therapeutics N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001613780",
+    "name": "DBV Technologies S.A.",
+    "status_events": []
+  },
+  {
+    "cik": "0001614744",
+    "name": "PURPLE BIOTECH LTD.",
+    "status_events": []
+  },
+  {
+    "cik": "0001615219",
+    "name": "Decoy Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001618835",
+    "name": "Evofem Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001619856",
+    "name": "Caribou Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001620463",
+    "name": "LeonaBio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001620737",
+    "name": "ORGANIGRAM GLOBAL INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001621221",
+    "name": "ARTELO BIOSCIENCES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001621227",
+    "name": "Adaptimmune Therapeutics PLC",
+    "status_events": []
+  },
+  {
+    "cik": "0001622229",
+    "name": "Cogent Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001622244",
+    "name": "One World Products, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001623526",
+    "name": "Stoke Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001625297",
+    "name": "Indivior Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001626878",
+    "name": "XBiotech Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001626971",
+    "name": "Corvus Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001627281",
+    "name": "Cellectis S.A.",
+    "status_events": []
+  },
+  {
+    "cik": "0001628171",
+    "name": "Revolution Medicines, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001631574",
+    "name": "Wave Life Sciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001635088",
+    "name": "Roivant Sciences Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001636282",
+    "name": "Spyre Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001636651",
+    "name": "Ovid Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001637715",
+    "name": "OnKure Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001638097",
+    "name": "Entera Bio Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001638287",
+    "name": "MetaVia Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001640266",
+    "name": "Voyager Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001641281",
+    "name": "Bolt Biotherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001641489",
+    "name": "vTv Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001642178",
+    "name": "Grey Matters Health Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001643918",
+    "name": "Biodexa Pharmaceuticals Plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001644963",
+    "name": "AVENUE THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001645460",
+    "name": "Cue Biopharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001645469",
+    "name": "Monopar Therapeutics",
+    "status_events": []
+  },
+  {
+    "cik": "0001648257",
+    "name": "HUTCHMED (China) Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001649094",
+    "name": "Vaxcyte, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001649904",
+    "name": "RHYTHM PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001649989",
+    "name": "Outlook Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001650648",
+    "name": "4D Molecular Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001650664",
+    "name": "Editas Medicine, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001651308",
+    "name": "BeOne Medicines Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001651625",
+    "name": "AC Immune SA",
+    "status_events": []
+  },
+  {
+    "cik": "0001652935",
+    "name": "ACTUATE THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001653087",
+    "name": "Alector, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001655759",
+    "name": "ARVINAS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001655923",
+    "name": "Alpha Cognition Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001657677",
+    "name": "Parabilis Medicines, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001658247",
+    "name": "Crinetics Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001658551",
+    "name": "Amylyx Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001658678",
+    "name": "BioStem Technologies, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001659617",
+    "name": "Moleculin Biotech, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001660046",
+    "name": "Immuron Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001660334",
+    "name": "Verrica Pharmaceuticals Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001661059",
+    "name": "NextCure, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001661181",
+    "name": "Organogenesis Holdings Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001661998",
+    "name": "Q32 Bio Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001662579",
+    "name": "C4 Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001662774",
+    "name": "Quince Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001664710",
+    "name": "Keros Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001668243",
+    "name": "UroGen Pharma Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001671502",
+    "name": "Quoin Pharmaceuticals, Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001671584",
+    "name": "Aptevo Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001671858",
+    "name": "ARS Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001671927",
+    "name": "Immunocore Holdings plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001672619",
+    "name": "Enliven Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001674416",
+    "name": "CRISPR Therapeutics AG",
+    "status_events": []
+  },
+  {
+    "cik": "0001676725",
+    "name": "IDEAYA Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001677077",
+    "name": "Alzamend Neuro, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001677940",
+    "name": "BeyondSpring Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001678660",
+    "name": "Prelude Therapeutics Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001679628",
+    "name": "JUPITER NEUROSCIENCES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001680048",
+    "name": "MUSTANG BIO, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001680367",
+    "name": "Shattuck Labs, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001680581",
+    "name": "Fulcrum Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001681087",
+    "name": "Tectonic Therapeutic, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001682639",
+    "name": "HYPERION DEFI, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001682852",
+    "name": "Moderna, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001683553",
+    "name": "SPRUCE BIOSCIENCES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001684144",
+    "name": "Zomedica Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001684693",
+    "name": "Sol-Gel Technologies Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001689375",
+    "name": "Entrada Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001689548",
+    "name": "Praxis Precision Medicines, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001690585",
+    "name": "Dianthus Therapeutics, Inc. /DE/",
+    "status_events": []
+  },
+  {
+    "cik": "0001691082",
+    "name": "LB PHARMACEUTICALS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001695473",
+    "name": "TRAFALGAR INTERNATIONAL, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001697862",
+    "name": "ARGENX SE",
+    "status_events": []
+  },
+  {
+    "cik": "0001698530",
+    "name": "EXICURE, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001699382",
+    "name": "PMV Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001701108",
+    "name": "Spero Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001701478",
+    "name": "Azitra, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001701541",
+    "name": "Black Diamond Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001702123",
+    "name": "Cardiol Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001703057",
+    "name": "AbCellera Biologics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001703647",
+    "name": "Korro Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001704292",
+    "name": "Zai Lab Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001706431",
+    "name": "Vir Biotechnology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001707502",
+    "name": "Solid Biosciences Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001708527",
+    "name": "ELUTIA INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001708599",
+    "name": "Serina Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001708688",
+    "name": "InflaRx N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001709626",
+    "name": "NuCana plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001709941",
+    "name": "BioAge Labs, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001710072",
+    "name": "Edgewise Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001710340",
+    "name": "Eton Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001711279",
+    "name": "Krystal Biotech, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001711754",
+    "name": "Inmune Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001711786",
+    "name": "Rocket One Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001713863",
+    "name": "Rafael Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001714899",
+    "name": "Denali Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001715925",
+    "name": "MindWalk Holdings Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001716947",
+    "name": "Ensysce Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001719406",
+    "name": "NRX Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001719714",
+    "name": "Mereo BioPharma Group plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001720580",
+    "name": "Adicet Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001720893",
+    "name": "BioXcel Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001721484",
+    "name": "Longeveron Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001723059",
+    "name": "Bio Essence Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001723069",
+    "name": "Tiziana Life Sciences Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001723128",
+    "name": "Amneal Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001723464",
+    "name": "BIOHARVEST SCIENCES INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001723980",
+    "name": "China SXT Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001724521",
+    "name": "Arcus Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001725160",
+    "name": "Zentalis Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001726711",
+    "name": "Aditxt, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001727196",
+    "name": "Scholar Rock Holding Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001728117",
+    "name": "Gossamer Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001728328",
+    "name": "InMed Pharmaceuticals Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001729214",
+    "name": "XORTX Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001729427",
+    "name": "CNS Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001730430",
+    "name": "Kiniksa Pharmaceuticals International, plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001730463",
+    "name": "Autolus Therapeutics plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001735438",
+    "name": "MeiraGTx Holdings plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001736243",
+    "name": "Acurx Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001736730",
+    "name": "Camp4 Therapeutics Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001737287",
+    "name": "Allogene Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001737953",
+    "name": "Replimune Group, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001738021",
+    "name": "Compass Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001739104",
+    "name": "Elanco Animal Health Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001739174",
+    "name": "BiomX Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001739410",
+    "name": "Rallybio Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001740279",
+    "name": "IN8BIO, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001742927",
+    "name": "REVIVA PHARMACEUTICALS HOLDINGS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001743344",
+    "name": "PyroGenesis Canada Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001743881",
+    "name": "BridgeBio Pharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001745114",
+    "name": "MOLECULAR PARTNERS AG",
+    "status_events": []
+  },
+  {
+    "cik": "0001745648",
+    "name": "Apnimed, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001745999",
+    "name": "Beam Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001746466",
+    "name": "Equillium, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001746473",
+    "name": "PLIANT THERAPEUTICS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001750149",
+    "name": "Inhibikase Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001750284",
+    "name": "Olema Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001751912",
+    "name": "NERVGEN PHARMA CORP.",
+    "status_events": []
+  },
+  {
+    "cik": "0001752828",
+    "name": "Celularity Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001754068",
+    "name": "Kalaris Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001755237",
+    "name": "Cyclerion Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001756594",
+    "name": "Inventiva S.A.",
+    "status_events": []
+  },
+  {
+    "cik": "0001757499",
+    "name": "Shuttle Pharmaceuticals Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001759138",
+    "name": "Cabaletta Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001759425",
+    "name": "Mirum Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001760854",
+    "name": "Nanobiotix S.A.",
+    "status_events": []
+  },
+  {
+    "cik": "0001761612",
+    "name": "BICYCLE THERAPEUTICS PLC",
+    "status_events": []
+  },
+  {
+    "cik": "0001761918",
+    "name": "Erasca, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001763950",
+    "name": "Lantern Pharma Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001764013",
+    "name": "Immunovant, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001766140",
+    "name": "Unicycive Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001768224",
+    "name": "Arcturus Therapeutics Holdings Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001768446",
+    "name": "Climb Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001770069",
+    "name": "MapLight Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001770121",
+    "name": "Sana Biotechnology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001771706",
+    "name": "Vireo Growth Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001771885",
+    "name": "Quantum Biopharma Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001771910",
+    "name": "ADC Therapeutics SA",
+    "status_events": []
+  },
+  {
+    "cik": "0001774857",
+    "name": "Aardvark Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001776111",
+    "name": "MBX Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001776985",
+    "name": "BioNTech SE",
+    "status_events": []
+  },
+  {
+    "cik": "0001778016",
+    "name": "NovaBridge Biosciences",
+    "status_events": []
+  },
+  {
+    "cik": "0001779578",
+    "name": "BGM Group Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001781174",
+    "name": "Acrivon Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001781983",
+    "name": "Aprea Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001782107",
+    "name": "Onconetix, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001782223",
+    "name": "Pyxis Oncology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001782303",
+    "name": "Boundless Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001782999",
+    "name": "PureTech Health plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001783036",
+    "name": "NewcelX Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001783183",
+    "name": "Phathom Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001783328",
+    "name": "TScan Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001785279",
+    "name": "Metagenomi Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001785530",
+    "name": "Werewolf Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001787297",
+    "name": "Passage BIO, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001787306",
+    "name": "Arcutis Biotherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001787400",
+    "name": "Nkarta, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001787740",
+    "name": "Valion Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001788028",
+    "name": "Jasper Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001789192",
+    "name": "Nexentis Technologies Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001789769",
+    "name": "Instil Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001789972",
+    "name": "Cullinan Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001790340",
+    "name": "Immuneering Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001792044",
+    "name": "Viatris Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001795091",
+    "name": "OS Therapies Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001796280",
+    "name": "Oric Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001798749",
+    "name": "Jade Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001799448",
+    "name": "Aligos Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001799788",
+    "name": "Greenwich LifeSciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001800315",
+    "name": "Damora Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001801198",
+    "name": "Legend Biotech Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001801834",
+    "name": "PRF Technologies Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001802665",
+    "name": "Harmony Biosciences Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001802768",
+    "name": "Royalty Pharma plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001806310",
+    "name": "Taysha Gene Therapies, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001806952",
+    "name": "Lyell Immunopharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001807120",
+    "name": "Design Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001807983",
+    "name": "Medicenna Therapeutics Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001808898",
+    "name": "Benitec Biopharma Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001809196",
+    "name": "Immatics N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001809616",
+    "name": "Universe Pharmaceuticals INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001810182",
+    "name": "ALX ONCOLOGY HOLDINGS INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001810560",
+    "name": "REVELATION BIOSCIENCES, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001811063",
+    "name": "Nuvation Bio Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001812364",
+    "name": "Relay Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001815442",
+    "name": "Kymera Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001815620",
+    "name": "Opthea Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001815776",
+    "name": "LENZ Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001815903",
+    "name": "Petros Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001815974",
+    "name": "Anebulo Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001816590",
+    "name": "COMPASS Pathways plc",
+    "status_events": []
+  },
+  {
+    "cik": "0001816736",
+    "name": "Disc Medicine, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001817229",
+    "name": "Vor Biopharma Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001817241",
+    "name": "Artiva Biotherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001817713",
+    "name": "Janux Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001818382",
+    "name": "Humacyte, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001818794",
+    "name": "Dyne Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001818838",
+    "name": "Adagene Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001818844",
+    "name": "Dogwood Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001819133",
+    "name": "Tango Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001819411",
+    "name": "Gain Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001819576",
+    "name": "Liquidia Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001819790",
+    "name": "Tarsus Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001820190",
+    "name": "Scilex Holding Co",
+    "status_events": []
+  },
+  {
+    "cik": "0001821586",
+    "name": "MoonLake Immunotherapeutics",
+    "status_events": []
+  },
+  {
+    "cik": "0001821825",
+    "name": "Organon & Co.",
+    "status_events": []
+  },
+  {
+    "cik": "0001822462",
+    "name": "Foghorn Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001822791",
+    "name": "Clene Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001823239",
+    "name": "MARAVAI LIFESCIENCES HOLDINGS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001824293",
+    "name": "GRI Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001824893",
+    "name": "Surrozen, Inc./DE",
+    "status_events": []
+  },
+  {
+    "cik": "0001826457",
+    "name": "Monte Rosa Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001826892",
+    "name": "BioAtla, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001827401",
+    "name": "BRIGHT MINDS BIOSCIENCES INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001827635",
+    "name": "Veradermics, Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0001828185",
+    "name": "Barinthus Biotherapeutics plc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001828253",
+    "name": "Evaxion A/S",
+    "status_events": []
+  },
+  {
+    "cik": "0001828316",
+    "name": "Pharming Group N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001828673",
+    "name": "HCW Biologics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001829247",
+    "name": "BullFrog AI Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001829635",
+    "name": "Transcode Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001829802",
+    "name": "Faeth Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001830214",
+    "name": "Ginkgo Bioworks Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001830487",
+    "name": "Pharvaris N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001831283",
+    "name": "LianBio",
+    "status_events": []
+  },
+  {
+    "cik": "0001831828",
+    "name": "Vera Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001832038",
+    "name": "Invivyd, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001833141",
+    "name": "CYBIN INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001833214",
+    "name": "SAB Biotherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001834105",
+    "name": "IMPACT BIOMEDICAL INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001835022",
+    "name": "Coya Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001835268",
+    "name": "Connect Biopharma Holdings Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001835579",
+    "name": "ImageneBio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001835597",
+    "name": "PepGen Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001836564",
+    "name": "Valneva SE",
+    "status_events": []
+  },
+  {
+    "cik": "0001837607",
+    "name": "AEON Biopharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001838716",
+    "name": "Genenta Science S.p.A.",
+    "status_events": []
+  },
+  {
+    "cik": "0001839140",
+    "name": "Revium Rx.",
+    "status_events": []
+  },
+  {
+    "cik": "0001839970",
+    "name": "BlossomHill Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001840229",
+    "name": "MiNK Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001840233",
+    "name": "Xilio Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001840439",
+    "name": "Biomea Fusion, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001840563",
+    "name": "PMGC Holdings Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001841330",
+    "name": "Pasithea Therapeutics Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0001841387",
+    "name": "Candel Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001842295",
+    "name": "Maze Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001842952",
+    "name": "Context Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001844417",
+    "name": "Estrella Immunopharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001847345",
+    "name": "Aspire Biopharma Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001847367",
+    "name": "ALUMIS INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001849296",
+    "name": "OKYO Pharma Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001850119",
+    "name": "Century Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001850270",
+    "name": "PROKIDNEY CORP.",
+    "status_events": []
+  },
+  {
+    "cik": "0001850767",
+    "name": "Accustem Sciences Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001851484",
+    "name": "CITIUS ONCOLOGY, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001851651",
+    "name": "Beroni Group Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001853816",
+    "name": "Dermata Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001853921",
+    "name": "Scribe Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001854078",
+    "name": "MindMaze Therapeutics Holding SA",
+    "status_events": []
+  },
+  {
+    "cik": "0001854270",
+    "name": "Senti Biosciences Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001855129",
+    "name": "GH Research PLC",
+    "status_events": []
+  },
+  {
+    "cik": "0001855175",
+    "name": "Contineum Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001855485",
+    "name": "Calidi Biotherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001855644",
+    "name": "Zura Bio Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001856725",
+    "name": "Rani Therapeutics Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001857030",
+    "name": "Intercure Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001857044",
+    "name": "Indaptus Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001858685",
+    "name": "Biofrontera Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001858848",
+    "name": "Tenaya Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001859007",
+    "name": "ZyVersa Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001860657",
+    "name": "Allarity Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001860871",
+    "name": "Tevogen Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001861123",
+    "name": "Eikon Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001862150",
+    "name": "Cingulate Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001863127",
+    "name": "Tyra Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001865494",
+    "name": "IO Biotech, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001867066",
+    "name": "Journey Medical Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001867096",
+    "name": "Xeris Biopharma Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001868279",
+    "name": "ArriVent BioPharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001869105",
+    "name": "BridgeBio Oncology Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001869974",
+    "name": "Ocean Biomedical, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001870404",
+    "name": "CERO THERAPEUTICS HOLDINGS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001873093",
+    "name": "CytoMed Therapeutics Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001873835",
+    "name": "Immix Biopharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001873875",
+    "name": "Incannex Healthcare Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001874252",
+    "name": "Quantum Cyber N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001875091",
+    "name": "NeuroSense Therapeutics Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001875558",
+    "name": "Nuvectis Pharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001876431",
+    "name": "Prenetics Global Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001878313",
+    "name": "MAIA Biotechnology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001880438",
+    "name": "AN2 Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001882782",
+    "name": "Odyssey Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001885522",
+    "name": "Neumora Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001888886",
+    "name": "Structure Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001889109",
+    "name": "BELITE BIO, INC",
+    "status_events": []
+  },
+  {
+    "cik": "0001889791",
+    "name": "INNOCAN PHARMA Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0001891512",
+    "name": "Adastra Holdings Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001892500",
+    "name": "Clearmind Medicine Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001893219",
+    "name": "Abpro Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001894525",
+    "name": "Apimeds Pharmaceuticals US, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001894562",
+    "name": "Prime Medicine, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001896212",
+    "name": "CDT Equity Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001898416",
+    "name": "Alvotech",
+    "status_events": []
+  },
+  {
+    "cik": "0001903784",
+    "name": "Vogenx, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001904286",
+    "name": "MIRA PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001907108",
+    "name": "Lexeo Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001907223",
+    "name": "Greenland Mines Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001913577",
+    "name": "Semnur Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001919246",
+    "name": "Pelthos Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001920092",
+    "name": "Gelteq Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001933414",
+    "name": "Mineralys Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001935979",
+    "name": "Biohaven Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001936258",
+    "name": "NewAmsterdam Pharma Co N.V.",
+    "status_events": []
+  },
+  {
+    "cik": "0001937653",
+    "name": "Zymeworks Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001937993",
+    "name": "Cadrenal Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001938571",
+    "name": "ADAPTIN BIO, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001944552",
+    "name": "Adlai Nortye Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001944885",
+    "name": "Apollomics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001946563",
+    "name": "60 DEGREES PHARMACEUTICALS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001949257",
+    "name": "Radiopharm Theranostics Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001953530",
+    "name": "Oculis Holding AG",
+    "status_events": []
+  },
+  {
+    "cik": "0001953926",
+    "name": "Zenas BioPharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001954488",
+    "name": "Jyong Biotech Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001956827",
+    "name": "Abivax S.A.",
+    "status_events": []
+  },
+  {
+    "cik": "0001958777",
+    "name": "FibroBiologics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001962011",
+    "name": "Kairos Pharma, LTD.",
+    "status_events": []
+  },
+  {
+    "cik": "0001962738",
+    "name": "CASI Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001966126",
+    "name": "NuvOx Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001971387",
+    "name": "Liminatus Pharma, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001971532",
+    "name": "Telomir Pharmaceuticals, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001974640",
+    "name": "Apogee Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001975641",
+    "name": "Zhengye Biotechnology Holding Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0001979414",
+    "name": "NEONC TECHNOLOGIES HOLDINGS, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0001980845",
+    "name": "enGene Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001984086",
+    "name": "Septerna, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001985062",
+    "name": "PSYENCE BIOMEDICAL LTD.",
+    "status_events": []
+  },
+  {
+    "cik": "0001991792",
+    "name": "CG Oncology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001994702",
+    "name": "Kyverna Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0001997296",
+    "name": "Medicus Pharma Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0001999480",
+    "name": "Alto Neuroscience, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002000775",
+    "name": "Black Hawk Acquisition Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0002007191",
+    "name": "Telix Pharmaceuticals Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0002007919",
+    "name": "Inhibrx Biosciences, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002010788",
+    "name": "EXOZYMES INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0002012593",
+    "name": "Rapport Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002020932",
+    "name": "Agomab Therapeutics NV",
+    "status_events": []
+  },
+  {
+    "cik": "0002022416",
+    "name": "Silexion Therapeutics Corp",
+    "status_events": []
+  },
+  {
+    "cik": "0002022626",
+    "name": "Upstream Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002023016",
+    "name": "Turn Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002023311",
+    "name": "ASCENTAGE PHARMA GROUP INTERNATIONAL",
+    "status_events": []
+  },
+  {
+    "cik": "0002023658",
+    "name": "Bicara Therapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002025942",
+    "name": "Curanex Pharmaceuticals Inc",
+    "status_events": []
+  },
+  {
+    "cik": "0002027329",
+    "name": "Optimi Health Corp.",
+    "status_events": []
+  },
+  {
+    "cik": "0002029039",
+    "name": "Nasus Pharma Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0002035832",
+    "name": "Aktis Oncology, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002036042",
+    "name": "Sionna Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002038166",
+    "name": "Nok Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002042347",
+    "name": "Seaport Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002044725",
+    "name": "Evommune, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002049977",
+    "name": "Starton Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002056611",
+    "name": "Latigo Biotherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002058707",
+    "name": "Attovia Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002070534",
+    "name": "SL Science Holding Ltd",
+    "status_events": []
+  },
+  {
+    "cik": "0002075320",
+    "name": "Polaryx Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002079109",
+    "name": "Veraxa Biotech AG - Post de-SPAC",
+    "status_events": []
+  },
+  {
+    "cik": "0002079272",
+    "name": "Lakewood-Amedex Biotherapeutics Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002081043",
+    "name": "AtaiBeckley Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002087716",
+    "name": "ROKIT America, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002091349",
+    "name": "First Tracks Biotherapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002093101",
+    "name": "Atrium Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002094256",
+    "name": "BEACON TOPCO, INC.",
+    "status_events": []
+  },
+  {
+    "cik": "0002096997",
+    "name": "Kailera Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002100782",
+    "name": "Generate Biomedicines, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002102720",
+    "name": "Tarsier Pharma Ltd.",
+    "status_events": []
+  },
+  {
+    "cik": "0002114044",
+    "name": "Hemab Therapeutics Holdings, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002123613",
+    "name": "Kardigan, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002124403",
+    "name": "Vicore Pharma Holding AB",
+    "status_events": []
+  },
+  {
+    "cik": "0002130606",
+    "name": "Obsidian Therapeutics, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0002131524",
+    "name": "Braveheart Bio, Inc.",
+    "status_events": []
+  },
+  {
+    "cik": "0000356591",
+    "name": "Neurologix, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2012-03-16",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0000357097",
+    "name": "Fibrocell Science, Inc. (formerly Isolagen)",
+    "status_events": [
+      {
+        "effective_date": "2009-06-15",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2009-07-24",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2019-12-13",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0000764195",
+    "name": "VBI Vaccines Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-07-30",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2024-09-06",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0000799698",
+    "name": "LadRx Corporation",
+    "status_events": [
+      {
+        "effective_date": "2019-06-24",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2025-07-28",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0000827809",
+    "name": "Novelion Therapeutics Inc.",
+    "status_events": [
+      {
+        "effective_date": "2019-12-17",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2020-01-09",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0000887247",
+    "name": "DMK Pharmaceuticals Corporation",
+    "status_events": [
+      {
+        "effective_date": "2024-02-02",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2024-03-21",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001017491",
+    "name": "Seelos Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-11-15",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2025-04-04",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001024126",
+    "name": "Pernix Therapeutics Holdings, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2019-02-18",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2019-04-02",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001076682",
+    "name": "PolarityTE, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-06-06",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-07-10",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001098880",
+    "name": "IntelGenx Technologies Corp.",
+    "status_events": [
+      {
+        "effective_date": "2025-02-28",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001105533",
+    "name": "Argos Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2018-07-19",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2018-11-30",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001109196",
+    "name": "MabVax Therapeutics Holdings, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2018-09-27",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2019-03-21",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001135906",
+    "name": "EPIRUS Biopharmaceuticals, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2016-07-25",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2016-09-26",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001208261",
+    "name": "Immune Pharmaceuticals Inc.",
+    "status_events": [
+      {
+        "effective_date": "2019-01-08",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2019-02-17",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001296391",
+    "name": "Tengion, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2012-11-16",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2014-12-29",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001335103",
+    "name": "Protea Biosciences Group, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2017-12-01",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001377053",
+    "name": "AtheroNova Inc.",
+    "status_events": [
+      {
+        "effective_date": "2015-03-02",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001385228",
+    "name": "BIND Therapeutics, Inc. (DNIB Unwind)",
+    "status_events": [
+      {
+        "effective_date": "2016-05-01",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2016-09-26",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001401708",
+    "name": "NanoString Technologies, Inc. (NS Wind Down)",
+    "status_events": [
+      {
+        "effective_date": "2024-02-04",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2024-04-09",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001415684",
+    "name": "MusclePharm Corporation",
+    "status_events": [
+      {
+        "effective_date": "2022-12-15",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001436161",
+    "name": "United Cannabis Corporation",
+    "status_events": [
+      {
+        "effective_date": "2020-04-20",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001444307",
+    "name": "OncoSec Medical Incorporated",
+    "status_events": [
+      {
+        "effective_date": "2023-06-14",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-07-10",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001445499",
+    "name": "Impel Pharmaceuticals Inc. (IPI Legacy Liquidation)",
+    "status_events": [
+      {
+        "effective_date": "2023-12-19",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-12-27",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001467154",
+    "name": "Novan, Inc. (NVN Liquidation)",
+    "status_events": [
+      {
+        "effective_date": "2023-07-17",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-09-08",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001504167",
+    "name": "Timber Pharmaceuticals, Inc. (TREX Wind-Down)",
+    "status_events": [
+      {
+        "effective_date": "2023-11-17",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-11-29",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001539029",
+    "name": "Clearside Biomedical, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2025-11-23",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2025-12-08",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001551986",
+    "name": "9 Meters Biopharma, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-07-17",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-09-08",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001561551",
+    "name": "Enumeral Biomedical Holdings, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2018-01-29",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001567892",
+    "name": "Mallinckrodt plc (Keenova Therapeutics)",
+    "status_events": [
+      {
+        "effective_date": "2020-10-12",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2020-10-13",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2023-08-28",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-09-06",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001580063",
+    "name": "Biora Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-12-27",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2025-06-04",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001586105",
+    "name": "Egalet Corporation (Zyla Life Sciences)",
+    "status_events": [
+      {
+        "effective_date": "2018-10-30",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2019-01-08",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2020-05-20",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001603207",
+    "name": "Notable Labs, Ltd.",
+    "status_events": [
+      {
+        "effective_date": "2024-10-13",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2025-03-05",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001656328",
+    "name": "Sienna Biopharmaceuticals, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2019-09-16",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2020-02-05",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001659323",
+    "name": "Iterum Therapeutics plc",
+    "status_events": [
+      {
+        "effective_date": "2026-03-27",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2026-06-23",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001660719",
+    "name": "Aralez Pharmaceuticals Inc. (Old API Wind-down)",
+    "status_events": [
+      {
+        "effective_date": "2018-08-10",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2018-09-27",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001739426",
+    "name": "RVL Pharmaceuticals plc",
+    "status_events": [
+      {
+        "effective_date": "2023-10-12",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2023-11-20",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001780097",
+    "name": "Baudax Bio, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2024-02-15",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2024-02-22",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001792581",
+    "name": "Kiromic BioPharma, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-11-20",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2025-03-21",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001804591",
+    "name": "23andMe Holding Co. (Chrome Holding)",
+    "status_events": [
+      {
+        "effective_date": "2025-03-23",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2025-06-06",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001805087",
+    "name": "Gelesis Holdings, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2023-04-26",
+        "status": "delisted"
+      },
+      {
+        "effective_date": "2023-10-30",
+        "status": "bankrupt"
+      }
+    ]
+  },
+  {
+    "cik": "0001817944",
+    "name": "Clarus Therapeutics Holdings, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2022-09-05",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2022-09-14",
+        "status": "delisted"
+      }
+    ]
+  },
+  {
+    "cik": "0001850838",
+    "name": "Omega Therapeutics, Inc.",
+    "status_events": [
+      {
+        "effective_date": "2025-02-10",
+        "status": "bankrupt"
+      },
+      {
+        "effective_date": "2025-03-20",
+        "status": "delisted"
+      }
+    ]
+  }
+]
