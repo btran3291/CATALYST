@@ -65,14 +65,21 @@ def active_companies(db_path: str, as_of_date: str | None = None) -> list[tuple[
     return rows
 
 
-def _latest_estimate(conn, table: str, cik: str) -> dict | None:
-    row = conn.execute(
-        f"""
+def _latest_estimate(conn, table: str, cik: str, as_of_date: str | None = None) -> dict | None:
+    """Most recent estimate KNOWN AS OF as_of_date (invariant 1). An estimate
+    entered in 2026 must not appear in a 2023 backtest — it would both display
+    a range nobody had yet and, worse, promote the row into the
+    estimate-backed sort tier that only exists because someone did the work."""
+    query = f"""
         SELECT as_of_date, p10_date, p50_date, p90_date, basis
-        FROM {table} WHERE cik = ? ORDER BY as_of_date DESC LIMIT 1
-        """,
-        (cik,),
-    ).fetchone()
+        FROM {table} WHERE cik = ?
+    """
+    params: list[str] = [cik]
+    if as_of_date is not None:
+        query += " AND as_of_date <= ?"
+        params.append(as_of_date)
+    query += " ORDER BY as_of_date DESC LIMIT 1"
+    row = conn.execute(query, params).fetchone()
     if row is None:
         return None
     return {"as_of_date": row[0], "p10_date": row[1], "p50_date": row[2], "p90_date": row[3], "basis": row[4]}
@@ -105,8 +112,8 @@ def rank(db_path: str, as_of_date: str | None = None) -> list[dict]:
             continue
 
         latest = results[-1]
-        catalyst_est = _latest_estimate(conn, "catalyst_estimates", cik)
-        buildout_est = _latest_estimate(conn, "buildout_estimates", cik)
+        catalyst_est = _latest_estimate(conn, "catalyst_estimates", cik, as_of_date)
+        buildout_est = _latest_estimate(conn, "buildout_estimates", cik, as_of_date)
 
         if latest["stage_max"] > NOT_YET_INFLECTED_MAX_STAGE and catalyst_est is None:
             # Rank only companies we KNOW haven't inflected (stage_max <= 2),
@@ -136,6 +143,13 @@ def rank(db_path: str, as_of_date: str | None = None) -> list[dict]:
                 "latest_quarterly_revenue": latest["value"],
                 "time_to_catalyst": catalyst_est["p50_date"] if catalyst_est else "no estimate on file",
                 "materiality": buildout_est["basis"] if buildout_est else "no estimate on file",
+                # The two fields above collapse a distribution to one number
+                # for the CLI's single-line output. The full p10/p50/p90 goes
+                # out alongside them so any consumer that can render a range
+                # (the API, and the front end behind it) never has to present
+                # the p50 as if it were a date we believe (invariant 3).
+                "catalyst_estimate": catalyst_est,
+                "buildout_estimate": buildout_est,
             }
         )
 

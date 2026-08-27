@@ -4,7 +4,7 @@ Restart prompt: paste this file's contents (or point Claude at it) to resume.
 Read CLAUDE.md first for the project's non-negotiable invariants — this file
 covers what's been built and what's mid-flight, not the design philosophy.
 
-Last updated 2026-08-26.
+Last updated 2026-08-27.
 
 ## Current state in one paragraph
 
@@ -13,8 +13,8 @@ non-survivors), 69,591 revenue facts ingested from SEC XBRL, every
 non-survivor status date prose-verified from filings. The ranking
 produces 101 entries — 2 with real filing-backed time-to-catalyst
 estimates, the rest ranked by revenue momentum, with stale rows demoted
-and labeled. Committed and pushed to GitHub. Next unbuilt piece is the
-FastAPI layer.
+and labeled. The FastAPI read-only layer (`api.py`) is now built and
+smoke-tested against the live DB. Next unbuilt piece is the front end.
 
 ## Git / GitHub
 
@@ -88,6 +88,22 @@ FastAPI layer.
   of the unique key, so a corrected date would have inserted a duplicate
   event next to the stale one. Full rerun over 890 companies takes
   several minutes at the SEC rate limit; run it in the background.
+- `api.py` — FastAPI read-only HTTP layer. Every connection it opens is
+  sqlite `mode=ro` and every pipeline call passes `persist=False`, so
+  nothing reachable over HTTP can write to the point-in-time store.
+  `as_of` is a query param on every derived-value endpoint, resolved to a
+  concrete date once at the request boundary (so the cache key and the
+  classifier see the same date), then threaded into `knowledge_date <=`,
+  `effective_date <=`, and `as_of_date <=` filters. Rankings and the
+  universe-wide transition sweep are `lru_cache`d on (as_of, db mtime+size)
+  — rebuilding catalyst.db invalidates every cached result. Endpoints:
+  `/health`, `/universe/stats`, `/ranking`, `/transitions`, `/companies`,
+  `/companies/{cik}`, `/companies/{cik}/quarters`, `/companies/{cik}/stages`.
+  Run with `uvicorn api:app --reload`; `/docs` is live and `/openapi.json`
+  is what the front end gets generated against. `/transitions` deliberately
+  sweeps ALL companies including non-survivors (invariant 2).
+  Note: `fastapi.testclient` needs `httpx2` installed, which the venv lacks
+  — smoke-test by running uvicorn on a port and curling it instead.
 - `audit_dates.py` — the (known-limited) regex bankruptcy-date auditor.
   Superseded in practice by the sentence-extraction method below, but
   kept for reference.
@@ -114,7 +130,7 @@ Scratch scripts lived in session tmp dirs, not the repo.
 
 ## Universe state (as of 2026-08-26, see companies.json for ground truth)
 
-890 companies, 144 status events, 69,591 facts, 2,306 concept_conflicts
+890 companies, 144 status events, 69,591 facts, 2,440 concept_conflicts
 (biotech brought many alias conflicts — quarantined by design, not
 investigated per-company). DB status events verified to match
 companies.json exactly (zero mismatches).
@@ -274,9 +290,35 @@ excludes them. Their value is survivorship-correct backtests
 1. ~~Ranking generation~~ — done; estimate-aware, staleness-aware
 2. ~~Bulk-import tooling~~ — done, sync semantics
 3. ~~Survivor-side discovery~~ — done, space AND biotech
-4. **API layer (FastAPI) — NOT started, this is next.** User wants
-   shareable/multi-user eventually, not just a local tool.
-5. Front end — not started, blocked on 4.
+4. ~~API layer (FastAPI)~~ — done, read-only and point-in-time-correct
+5. **Front end — NOT started, this is next.** Generate against
+   `/openapi.json`. User wants shareable/multi-user eventually, not just a
+   local tool; CORS is already open by env var (`CATALYST_CORS_ORIGINS`).
+
+## Point-in-time leak in ranking.py — FIXED (2026-08-27)
+
+Found while smoke-testing the API: `ranking._latest_estimate()` had no
+`as_of_date` filter, so a backtest at any date returned estimates entered
+later. A 2023-01-01 ranking was showing NextNav's 2026-08-25 catalyst
+range — and worse, promoting NextNav into the estimate-backed sort tier
+and past the `stage_max <= 2` filter on the strength of an estimate that
+did not exist yet. Straight invariant 1 violation.
+
+Fixed by mirroring `stages._get_buildout_p50()`, which already did this
+correctly: `AND as_of_date <= ?` when a date is given, unfiltered when it
+is None. Verified at the boundary — `estimates_only` returns 2 rows at
+2026-08-26 and 2026-08-25, 0 rows at 2026-08-24 (the estimates' own
+as_of_date is 2026-08-25). The 2023 ranking dropped 79 -> 78 entries;
+the entry that vanished is NextNav, which is correct.
+
+`ranking.py` also now emits the full `catalyst_estimate` /
+`buildout_estimate` dicts alongside the CLI's single-p50 strings, so the
+API can render p10/p50/p90 as a range and never present the p50 as a date
+we believe (invariant 3).
+
+Lesson worth generalizing: any new table joined into a query needs its own
+point-in-time predicate. Two of the three estimate lookups had one; the
+third was written later and didn't.
 
 ## Cross-sector validation (done)
 
@@ -301,7 +343,7 @@ AI infra (user's other interests) not yet tried but should work the same.
   alias conflicts (concept_conflicts) from genuine corporate complexity
   (Endo's 2014 Irish inversion; Teligent's 2017-2019 restatement/SEC
   investigation) — correctly left quarantined, not bugs to fix.
-- 2,306 concept_conflicts total across the universe, never audited in
+- 2,440 concept_conflicts total across the universe, never audited in
   bulk. Some are certainly the same category-breakdown-tag class of bug
   fixed twice in concepts.py; worth a sampling pass someday.
 - `discover_survivors.py`'s SPAC-name regex flags but never excludes —
