@@ -1,0 +1,1301 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Catalyst",
+    "summary": "Point-in-time research API for pre-revenue and early-revenue public companies.",
+    "description": "HTTP layer over the Catalyst pipeline.\n\nRead-only by construction: every query this module runs itself goes through\na `mode=ro` sqlite connection, and the pipeline functions it calls are all\ninvoked with persist=False. Nothing reachable over HTTP can write to the\npoint-in-time store.\n\nPoint-in-time (invariant 1) is preserved through the HTTP surface: every\nendpoint that reads derived values takes `as_of`, which is threaded down\ninto `knowledge_date <= as_of` filters in quarters/stages and\n`effective_date <= as_of` in the status-event join. An unset `as_of` means\n\"today\", resolved once at the request boundary so the value that reaches\nthe cache key and the value that reaches the classifier are the same date.\n\nRun it:\n    uvicorn api:app --reload\nInteractive docs at /docs; the OpenAPI schema at /openapi.json is what the\nfront end (planning step 5) will be generated against.\n",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "meta"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/universe/stats": {
+      "get": {
+        "tags": [
+          "meta"
+        ],
+        "summary": "Universe Stats",
+        "description": "Universe composition as of a date. Non-survivors are counted, never\nexcluded \u2014 they stay in the universe permanently (invariant 2).",
+        "operationId": "universe_stats_universe_stats_get",
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "As Of"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UniverseStats"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ranking": {
+      "get": {
+        "tags": [
+          "ranking"
+        ],
+        "summary": "Ranking",
+        "description": "Active companies we KNOW haven't inflected (stage_max <= 2), ranked by\nrevenue momentum, plus any company with a hand-verified catalyst estimate\nregardless of stage range.\n\nOrdering: fresh rows first \u2014 estimate-backed by nearest p50, then momentum\nby streak \u2014 with stale rows below all of them, most recently observed\nfirst. \"Stale\" means the latest observed quarter ended more than ~18\nmonths before `as_of`; such a company is still listed and filing, so the\nrow is demoted and labelled rather than dropped.\n\n`catalyst` is null when no estimate is on file. That is a real answer \u2014\nthe absence of an estimate is never filled in with a guess.",
+        "operationId": "ranking_ranking_get",
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Simulated present. Omit for today.",
+              "title": "As Of"
+            },
+            "description": "Simulated present. Omit for today."
+          },
+          {
+            "name": "include_stale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "Stale rows are demoted, never dropped.",
+              "default": true,
+              "title": "Include Stale"
+            },
+            "description": "Stale rows are demoted, never dropped."
+          },
+          {
+            "name": "estimates_only",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "Only rows with a real catalyst estimate on file.",
+              "default": false,
+              "title": "Estimates Only"
+            },
+            "description": "Only rows with a real catalyst estimate on file."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RankingResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/transitions": {
+      "get": {
+        "tags": [
+          "ranking"
+        ],
+        "summary": "Transitions",
+        "description": "Detected stage crossings across the whole universe, most recent first.\n\nThe default 2 -> 3 (first revenue -> inflection) is the signal this\nproject exists to find. Non-survivors are included: excluding them is\nprecisely the survivorship bias invariant 2 forbids.",
+        "operationId": "transitions_transitions_get",
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "As Of"
+            }
+          },
+          {
+            "name": "from_stage",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 5,
+              "minimum": 0,
+              "default": 2,
+              "title": "From Stage"
+            }
+          },
+          {
+            "name": "to_stage",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 5,
+              "minimum": 0,
+              "default": 3,
+              "title": "To Stage"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Only transitions at or after this period end.",
+              "title": "Since"
+            },
+            "description": "Only transitions at or after this period end."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Transition"
+                  },
+                  "title": "Response Transitions Transitions Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "List Companies",
+        "operationId": "list_companies_companies_get",
+        "parameters": [
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "As Of"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Case-insensitive substring of name or CIK.",
+              "title": "Q"
+            },
+            "description": "Case-insensitive substring of name or CIK."
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^(all|active|inactive|bankrupt|delisted|acquired)$",
+              "default": "all",
+              "title": "Status"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyListResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies/{cik}": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Detail",
+        "description": "Everything known about one company as of a date, in one round trip:\nstatus history, fact coverage, estimates, and the classified quarter\nseries the ranking is derived from.",
+        "operationId": "company_detail_companies__cik__get",
+        "parameters": [
+          {
+            "name": "cik",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Cik"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "As Of"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompanyDetail"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies/{cik}/quarters": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Quarters",
+        "description": "Discrete per-quarter values, before classification. A missing quarter\nis a real gap \u2014 a period quarantined into concept_conflicts is absent\nhere rather than estimated.",
+        "operationId": "company_quarters_companies__cik__quarters_get",
+        "parameters": [
+          {
+            "name": "cik",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Cik"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "As Of"
+            }
+          },
+          {
+            "name": "concept",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "revenue",
+              "title": "Concept"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/QuarterPoint"
+                  },
+                  "title": "Response Company Quarters Companies  Cik  Quarters Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies/{cik}/stages": {
+      "get": {
+        "tags": [
+          "companies"
+        ],
+        "summary": "Company Stages",
+        "description": "Stage assignment per observed quarter. Computed fresh and never\npersisted \u2014 stage_assignments is a rebuildable cache, and an HTTP read\nhas no business writing to it.",
+        "operationId": "company_stages_companies__cik__stages_get",
+        "parameters": [
+          {
+            "name": "cik",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Cik"
+            }
+          },
+          {
+            "name": "as_of",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "As Of"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SeriesPoint"
+                  },
+                  "title": "Response Company Stages Companies  Cik  Stages Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CompanyDetail": {
+        "properties": {
+          "cik": {
+            "type": "string",
+            "title": "Cik"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "status_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Date"
+          },
+          "status_events": {
+            "items": {
+              "$ref": "#/components/schemas/StatusEvent"
+            },
+            "type": "array",
+            "title": "Status Events"
+          },
+          "fact_count": {
+            "type": "integer",
+            "title": "Fact Count"
+          },
+          "concepts": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Concepts"
+          },
+          "units": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Units"
+          },
+          "first_period_end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "First Period End"
+          },
+          "latest_period_end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Period End"
+          },
+          "latest_knowledge_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Knowledge Date"
+          },
+          "conflict_count": {
+            "type": "integer",
+            "title": "Conflict Count",
+            "description": "Alias disagreements quarantined out of `facts` for this company. Non-zero is a caveat on the series below, not a bug."
+          },
+          "catalyst_estimates": {
+            "items": {
+              "$ref": "#/components/schemas/EstimateRange"
+            },
+            "type": "array",
+            "title": "Catalyst Estimates"
+          },
+          "buildout_estimates": {
+            "items": {
+              "$ref": "#/components/schemas/EstimateRange"
+            },
+            "type": "array",
+            "title": "Buildout Estimates"
+          },
+          "series": {
+            "items": {
+              "$ref": "#/components/schemas/SeriesPoint"
+            },
+            "type": "array",
+            "title": "Series"
+          },
+          "transitions_2_to_3": {
+            "items": {
+              "$ref": "#/components/schemas/Transition"
+            },
+            "type": "array",
+            "title": "Transitions 2 To 3"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cik",
+          "name",
+          "as_of",
+          "status",
+          "status_events",
+          "fact_count",
+          "concepts",
+          "units",
+          "conflict_count",
+          "catalyst_estimates",
+          "buildout_estimates",
+          "series",
+          "transitions_2_to_3"
+        ],
+        "title": "CompanyDetail"
+      },
+      "CompanyListResponse": {
+        "properties": {
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total"
+          },
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "offset": {
+            "type": "integer",
+            "title": "Offset"
+          },
+          "companies": {
+            "items": {
+              "$ref": "#/components/schemas/CompanySummary"
+            },
+            "type": "array",
+            "title": "Companies"
+          }
+        },
+        "type": "object",
+        "required": [
+          "as_of",
+          "total",
+          "limit",
+          "offset",
+          "companies"
+        ],
+        "title": "CompanyListResponse"
+      },
+      "CompanySummary": {
+        "properties": {
+          "cik": {
+            "type": "string",
+            "title": "Cik"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "description": "'active', or the latest recorded status event."
+          },
+          "status_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Status Date"
+          },
+          "fact_count": {
+            "type": "integer",
+            "title": "Fact Count"
+          },
+          "latest_period_end": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Period End"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cik",
+          "name",
+          "status",
+          "fact_count"
+        ],
+        "title": "CompanySummary"
+      },
+      "EstimateRange": {
+        "properties": {
+          "as_of_date": {
+            "type": "string",
+            "title": "As Of Date"
+          },
+          "p10_date": {
+            "type": "string",
+            "title": "P10 Date"
+          },
+          "p50_date": {
+            "type": "string",
+            "title": "P50 Date"
+          },
+          "p90_date": {
+            "type": "string",
+            "title": "P90 Date"
+          },
+          "basis": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Basis",
+            "description": "Filing-level reasoning behind the range."
+          }
+        },
+        "type": "object",
+        "required": [
+          "as_of_date",
+          "p10_date",
+          "p50_date",
+          "p90_date"
+        ],
+        "title": "EstimateRange",
+        "description": "A dated milestone as a distribution, never a single date (invariant 3)."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Health": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "db_path": {
+            "type": "string",
+            "title": "Db Path"
+          },
+          "companies": {
+            "type": "integer",
+            "title": "Companies"
+          },
+          "facts": {
+            "type": "integer",
+            "title": "Facts"
+          },
+          "latest_knowledge_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Knowledge Date"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "db_path",
+          "companies",
+          "facts"
+        ],
+        "title": "Health"
+      },
+      "QuarterPoint": {
+        "properties": {
+          "period_start": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Period Start"
+          },
+          "period_end": {
+            "type": "string",
+            "title": "Period End"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          },
+          "corroborated": {
+            "type": "boolean",
+            "title": "Corroborated"
+          }
+        },
+        "type": "object",
+        "required": [
+          "period_end",
+          "value",
+          "corroborated"
+        ],
+        "title": "QuarterPoint"
+      },
+      "RankEntry": {
+        "properties": {
+          "cik": {
+            "type": "string",
+            "title": "Cik"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "stage": {
+            "type": "string",
+            "title": "Stage",
+            "description": "stage_min, or 'min-max' when the range is undetermined."
+          },
+          "as_of": {
+            "type": "string",
+            "title": "As Of",
+            "description": "Period end of the latest quarter observed for this company."
+          },
+          "stale": {
+            "type": "boolean",
+            "title": "Stale",
+            "description": "Latest observation older than 546 days."
+          },
+          "age_days": {
+            "type": "integer",
+            "title": "Age Days"
+          },
+          "streak": {
+            "type": "integer",
+            "title": "Streak",
+            "description": "Consecutive quarter-over-quarter revenue increases."
+          },
+          "latest_quarterly_revenue": {
+            "type": "number",
+            "title": "Latest Quarterly Revenue",
+            "description": "Unit is whatever the filer reported in; mostly USD, some EUR/CHF/CAD/GBP. Not currency-normalized."
+          },
+          "catalyst": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EstimateRange"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Time to first revenue. Null means no estimate on file \u2014 never a guess."
+          },
+          "buildout": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/EstimateRange"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Time to full buildout."
+          }
+        },
+        "type": "object",
+        "required": [
+          "cik",
+          "name",
+          "stage",
+          "as_of",
+          "stale",
+          "age_days",
+          "streak",
+          "latest_quarterly_revenue"
+        ],
+        "title": "RankEntry"
+      },
+      "RankingResponse": {
+        "properties": {
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "total": {
+            "type": "integer",
+            "title": "Total",
+            "description": "Entries matching the filters, before pagination."
+          },
+          "fresh": {
+            "type": "integer",
+            "title": "Fresh"
+          },
+          "stale": {
+            "type": "integer",
+            "title": "Stale"
+          },
+          "limit": {
+            "type": "integer",
+            "title": "Limit"
+          },
+          "offset": {
+            "type": "integer",
+            "title": "Offset"
+          },
+          "entries": {
+            "items": {
+              "$ref": "#/components/schemas/RankEntry"
+            },
+            "type": "array",
+            "title": "Entries"
+          }
+        },
+        "type": "object",
+        "required": [
+          "as_of",
+          "total",
+          "fresh",
+          "stale",
+          "limit",
+          "offset",
+          "entries"
+        ],
+        "title": "RankingResponse"
+      },
+      "SeriesPoint": {
+        "properties": {
+          "period_end": {
+            "type": "string",
+            "title": "Period End"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value"
+          },
+          "corroborated": {
+            "type": "boolean",
+            "title": "Corroborated",
+            "description": "Another alias tag agreed within tolerance. Confidence signal, not a correctness guarantee."
+          },
+          "streak": {
+            "type": "integer",
+            "title": "Streak"
+          },
+          "stage": {
+            "type": "string",
+            "title": "Stage"
+          },
+          "stage_min": {
+            "type": "integer",
+            "title": "Stage Min"
+          },
+          "stage_max": {
+            "type": "integer",
+            "title": "Stage Max"
+          },
+          "basis": {
+            "type": "string",
+            "title": "Basis",
+            "description": "Which classifier rule fired."
+          }
+        },
+        "type": "object",
+        "required": [
+          "period_end",
+          "value",
+          "corroborated",
+          "streak",
+          "stage",
+          "stage_min",
+          "stage_max",
+          "basis"
+        ],
+        "title": "SeriesPoint"
+      },
+      "StatusEvent": {
+        "properties": {
+          "effective_date": {
+            "type": "string",
+            "title": "Effective Date"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "effective_date",
+          "status"
+        ],
+        "title": "StatusEvent"
+      },
+      "Transition": {
+        "properties": {
+          "cik": {
+            "type": "string",
+            "title": "Cik"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "period_end": {
+            "type": "string",
+            "title": "Period End"
+          },
+          "from_stage": {
+            "type": "integer",
+            "title": "From Stage"
+          },
+          "to_stage": {
+            "type": "integer",
+            "title": "To Stage"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cik",
+          "name",
+          "period_end",
+          "from_stage",
+          "to_stage"
+        ],
+        "title": "Transition"
+      },
+      "UniverseStats": {
+        "properties": {
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "companies": {
+            "type": "integer",
+            "title": "Companies"
+          },
+          "active": {
+            "type": "integer",
+            "title": "Active"
+          },
+          "inactive": {
+            "type": "integer",
+            "title": "Inactive"
+          },
+          "by_status": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "By Status"
+          },
+          "status_events": {
+            "type": "integer",
+            "title": "Status Events"
+          },
+          "facts": {
+            "type": "integer",
+            "title": "Facts"
+          },
+          "companies_with_facts": {
+            "type": "integer",
+            "title": "Companies With Facts"
+          },
+          "concept_conflicts": {
+            "type": "integer",
+            "title": "Concept Conflicts"
+          },
+          "catalyst_estimates": {
+            "type": "integer",
+            "title": "Catalyst Estimates"
+          },
+          "buildout_estimates": {
+            "type": "integer",
+            "title": "Buildout Estimates"
+          },
+          "earliest_knowledge_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Earliest Knowledge Date"
+          },
+          "latest_knowledge_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Latest Knowledge Date"
+          }
+        },
+        "type": "object",
+        "required": [
+          "as_of",
+          "companies",
+          "active",
+          "inactive",
+          "by_status",
+          "status_events",
+          "facts",
+          "companies_with_facts",
+          "concept_conflicts",
+          "catalyst_estimates",
+          "buildout_estimates"
+        ],
+        "title": "UniverseStats"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ Restart prompt: paste this file's contents (or point Claude at it) to resume.
 Read CLAUDE.md first for the project's non-negotiable invariants — this file
 covers what's been built and what's mid-flight, not the design philosophy.
 
-Last updated 2026-08-27.
+Last updated 2026-08-27 (front end).
 
 ## Current state in one paragraph
 
@@ -13,8 +13,9 @@ non-survivors), 69,591 revenue facts ingested from SEC XBRL, every
 non-survivor status date prose-verified from filings. The ranking
 produces 101 entries — 2 with real filing-backed time-to-catalyst
 estimates, the rest ranked by revenue momentum, with stale rows demoted
-and labeled. The FastAPI read-only layer (`api.py`) is now built and
-smoke-tested against the live DB. Next unbuilt piece is the front end.
+and labeled. The FastAPI read-only layer (`api.py`) and the React front end
+(`frontend/`) are both built and verified in a browser against the live
+DB. Every planned piece now exists end to end.
 
 ## Git / GitHub
 
@@ -104,6 +105,34 @@ smoke-tested against the live DB. Next unbuilt piece is the front end.
   sweeps ALL companies including non-survivors (invariant 2).
   Note: `fastapi.testclient` needs `httpx2` installed, which the venv lacks
   — smoke-test by running uvicorn on a port and curling it instead.
+- `frontend/` — React + Vite + TypeScript UI, three views (ranking,
+  company detail, transitions). Types are GENERATED from api.py's own
+  OpenAPI output, never hand-written: `npm run gen:api` runs
+  `dump_openapi.py` then `openapi-typescript`. **Rerun it after any change
+  to an api.py response model** — that regeneration is the whole reason
+  this is TypeScript rather than a static page, and skipping it silently
+  gives back the untyped situation.
+  - `src/api/client.ts` — one generic typed `get()`; every response type is
+    derived from the generated schema.
+  - `src/components/IntervalBar.tsx` — p10/p50/p90 drawn as a bar with the
+    p50 as an interior tick (invariant 3). The domain is shared across all
+    rows in a table so bar widths are comparable. `NoEstimate` renders the
+    absence explicitly — never an empty cell, which could read as "zero".
+  - `as_of` lives in the URL hash (`#/company/0001865631?as_of=2023-01-01`),
+    not component state, so a backtest view is a shareable link. Omitted
+    from the hash when it equals today.
+  - Built with `npm run build`; `api.py` mounts `frontend/dist` at `/app`
+    and `/` redirects there, so `uvicorn api:app` still serves everything
+    from one process and one origin. The mount is guarded on the directory
+    existing — a checkout that never ran `npm run build` gets a working API
+    and `/` falls back to `/docs`.
+  - **TypeScript is pinned to ~5.9 on purpose.** The Vite template pulls TS
+    6, which `openapi-typescript` (7.13) refuses as a peer. Don't bump it
+    without checking that generator.
+  - The template sets `erasableSyntaxOnly`, so TS-only syntax that emits
+    runtime code (constructor parameter properties, enums) is a build error.
+- `dump_openapi.py` — writes `frontend/openapi.json` from the `app` object
+  without starting a server.
 - `audit_dates.py` — the (known-limited) regex bankruptcy-date auditor.
   Superseded in practice by the sentence-extraction method below, but
   kept for reference.
@@ -291,9 +320,14 @@ excludes them. Their value is survivorship-correct backtests
 2. ~~Bulk-import tooling~~ — done, sync semantics
 3. ~~Survivor-side discovery~~ — done, space AND biotech
 4. ~~API layer (FastAPI)~~ — done, read-only and point-in-time-correct
-5. **Front end — NOT started, this is next.** Generate against
-   `/openapi.json`. User wants shareable/multi-user eventually, not just a
-   local tool; CORS is already open by env var (`CATALYST_CORS_ORIGINS`).
+5. ~~Front end~~ — done, React/Vite/TS generated against `/openapi.json`
+
+Nothing on the original sequence is left. Candidates for what's next, none
+started: populating `buildout_estimates` (still empty, so "materiality"
+reads "no estimate on file" everywhere); the 2,440-row concept_conflicts
+sampling pass; extending the universe beyond space + biotech (semis, AI
+infra); real multi-user deployment (auth, hosting) if it's going to be
+shared beyond a local process.
 
 ## Point-in-time leak in ranking.py — FIXED (2026-08-27)
 
@@ -319,6 +353,30 @@ we believe (invariant 3).
 Lesson worth generalizing: any new table joined into a query needs its own
 point-in-time predicate. Two of the three estimate lookups had one; the
 third was written later and didn't.
+
+## Front end decisions worth not re-litigating (2026-08-27)
+
+Stack was an explicit user choice of React + Vite + TS over a
+no-build-step static page, after a written pro/con. The deciding argument
+was compile-time safety against api.py's young response models; the
+accepted cost is the npm toolchain (which bit immediately — see the TS 6
+pin above).
+
+Display rules that exist for invariant reasons, not taste:
+- A bare p50 is never rendered anywhere. Every estimate shows p10 and p90
+  as the dominant visual element with p50 as a tick inside the range.
+- "no estimate on file" is rendered explicitly wherever an estimate is
+  absent, because a blank cell reads as zero or as "soon".
+- Stale rows are dimmed and badged with their age, never dropped.
+- Revenue carries no currency symbol — values are as-reported and NOT
+  normalized (USD/EUR/CHF/CAD/GBP all appear), so a "$" would be a
+  fabrication. The company page names the actual unit.
+- Counts that hit a page cap are labelled "200+ … capped", never reported
+  as if they were totals.
+- The revenue chart marks only the FIRST quarter at each distinct stage.
+  Marking every stage change was tried and is unreadable — NextNav
+  oscillates 2-5 / 3-5 for years and produced a dozen overlapping labels.
+  Per-quarter assignments live in the expandable table below the chart.
 
 ## Cross-sector validation (done)
 

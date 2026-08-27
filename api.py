@@ -27,6 +27,7 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from quarters import discrete_quarters
@@ -41,6 +42,13 @@ DB_PATH = os.environ.get("CATALYST_DB", str(Path(__file__).parent / "catalyst.db
 CORS_ORIGINS = os.environ.get("CATALYST_CORS_ORIGINS", "*").split(",")
 
 MAX_PAGE = 500
+
+# Production build of frontend/. Mounted when present so `uvicorn api:app`
+# serves the UI and the API from one process and one origin — the front end
+# then calls /ranking etc. relatively, and CORS stops mattering entirely.
+# Absent (nobody ran `npm run build`), the API still works and / falls back
+# to the docs.
+FRONTEND_DIST = Path(__file__).parent / "frontend" / "dist"
 
 app = FastAPI(
     title="Catalyst",
@@ -317,7 +325,7 @@ class Health(BaseModel):
 
 @app.get("/", include_in_schema=False)
 def index() -> RedirectResponse:
-    return RedirectResponse("/docs")
+    return RedirectResponse("/app/" if FRONTEND_DIST.is_dir() else "/docs")
 
 
 @app.get("/health", response_model=Health, tags=["meta"])
@@ -737,3 +745,15 @@ def company_stages(cik: str, as_of: date | None = None) -> list[SeriesPoint]:
         )
         for r in classify(DB_PATH, normalized, as_of_date=resolved, persist=False)
     ]
+
+
+# --------------------------------------------------------------------------
+# front end
+# --------------------------------------------------------------------------
+
+# Mounted last so it can never shadow an API route. html=True serves
+# index.html for unknown subpaths, which is what makes /app/#/company/... work
+# on a hard refresh. Guarded on existence: a checkout that hasn't run
+# `npm run build` should get a working API, not a startup crash.
+if FRONTEND_DIST.is_dir():
+    app.mount("/app", StaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")

@@ -4,3 +4,5 @@ __pycache__/
 catalyst.db
 *.db
 .claude/
+node_modules/
+frontend/dist/
