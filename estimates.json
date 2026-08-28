@@ -1,0 +1,31 @@
+{
+  "_comment": "Durable source of truth for hand-researched estimates, alongside companies.json for the universe. These rows are the most expensive artifact in the project \u2014 each one is a human reading filings \u2014 and catalyst.db is gitignored and regenerable, so they must live here or a rebuild destroys them. Every row needs a filing-backed basis citing accession numbers; see the verification standard in HANDOFF.md. NOTE the classifier consequence: a buildout_estimates p50 overrides streak-based maturity in stages.py \u2014 past that date a company with revenue is stage 5 regardless of momentum.",
+  "catalyst_estimates": [
+    {
+      "cik": "0001788060",
+      "as_of_date": "2026-08-25",
+      "p10_date": "2030-12-31",
+      "p50_date": "2032-06-30",
+      "p90_date": "2036-12-31",
+      "basis": "Starlab commercial space station (Voyager-led JV; Airbus/Mitsubishi/MDA/Palantir partners). Per 10-K filed 2026-03-10 (accn 0001628280-26-016543): launch anticipated 2029 on SpaceX Starship, revenue expected in first full year of operation (~2030); est. cost $2.8-3.3B vs $217.5M NASA Phase I grant ($34.3M remaining at YE2025) \u2014 bulk of funding NOT secured; CDR not yet complete; NASA Phase II CLD award not yet competed; ISS decommission 2030 sets demand timing. Catalyst = first Starlab segment revenue (segment is pre-revenue; company's D&ST segment already generates revenue). p10: on-schedule 2029 launch + first-year revenue. p50: 1.5-2.5yr slip (unfunded capex, CDR ahead, launch-vehicle dependency). p90: major slip. Conditional on program survival \u2014 Phase II loss or funding failure could remove the catalyst entirely."
+    },
+    {
+      "cik": "0001865631",
+      "as_of_date": "2026-08-25",
+      "p10_date": "2028-06-30",
+      "p50_date": "2029-12-31",
+      "p90_date": "2033-12-31",
+      "basis": "FCC Lower 900 MHz rulemaking. Petition filed 2024-04-16 (15 MHz nationwide 5G NR + PNT config); still pending with NO NPRM as of 10-Q filed 2026-08-11 (accn 0001554855-26-001789); referenced in FCC PNT Notice of Inquiry 2025-03-27. Catalyst = material revenue from spectrum monetization via MNO partnership. p10: NPRM ~6mo + R&O 2027 + fast partner ramp. p50: contested R&O 2028-29 (902-928 MHz unlicensed incumbents opposed) + ~1yr to first partner revenue. p90: reconsideration/litigation drag. Dates conditional on grant \u2014 outright denial is a live risk that removes the catalyst; company itself cites 'significant regulatory uncertainty' (contingent consideration unrecognized)."
+    }
+  ],
+  "buildout_estimates": [
+    {
+      "cik": "0001788060",
+      "as_of_date": "2026-08-28",
+      "p10_date": "2031-12-31",
+      "p50_date": "2034-06-30",
+      "p90_date": "2039-12-31",
+      "basis": "Starlab full operational capability (the maturity milestone, distinct from first revenue in catalyst_estimates). Sources: 10-K period 2025-12-31 (accn 0001628280-26-016543, filed 2026-03-10) and 10-Q period 2026-06-30 (accn 0001628280-26-052292, filed 2026-08-04). COMPANY POSITION: cost to design, manufacture and launch Starlab estimated at $2.8-3.3B, 'with launch anticipated in 2029 and revenue generation expected in Starlab's first full year of operation'; PDR completed January 2025; company is advancing 'through Critical Design Review toward hardware production'. ISS decommissioning in 2030 is the schedule driver. INDEPENDENT BUILD-RATE CHECK (the archetype method \u2014 spend to date vs. program cost vs. observed rate): construction in progress $37.3M at 2024-12-31, $143.9M at 2025-12-31, $193.5M at 2026-06-30. That is +$106.6M during 2025 and +$49.6M in H1 2026, i.e. a run rate near $100M/yr against a $2.8-3.3B program. Roughly 6-7% of the low-end program cost is in the ground after two years of acceleration. A 2029 launch is not reachable at the observed rate; it requires a step-change in funding. FUNDING GAP: the Nanoracks agreement's $217.5M of milestone funding is now fully drawn \u2014 'All milestone payments have now been earned as of June 30, 2026' \u2014 and government grant assistance offset against CIP is falling ($20.3M in Q2 2025 vs $7.0M in Q2 2026). NASA Phase II CLD has not been competed yet, so the largest prospective funding source is unawarded. One launch is under commitment at $90.0M with no date given ('a future estimated launch date'). p10 2031-12-31: Phase II CLD award lands near-term and financing closes; launch near the company's 2029-2030 guidance plus roughly a year of commissioning. p50 2034-06-30: launch slips to ~2032-33 \u2014 CDR incomplete at the last filing, and >$2.5B remains to be funded against a ~$100M/yr observed build rate \u2014 with full operational capability about a year after. p90 2039-12-31: program descoped, restructured, or repeatedly delayed. ORDERING: deliberately later than this company's catalyst estimate (p50 2032-06-30) at every percentile \u2014 revenue is expected in the first full year of operation, so first revenue precedes full buildout. NOT conditional on Starlab being the sole ISS successor; a Phase II loss would push past p90 rather than merely delay."
+    }
+  ]
+}

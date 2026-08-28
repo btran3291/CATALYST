@@ -4,7 +4,7 @@ Restart prompt: paste this file's contents (or point Claude at it) to resume.
 Read CLAUDE.md first for the project's non-negotiable invariants — this file
 covers what's been built and what's mid-flight, not the design philosophy.
 
-Last updated 2026-08-27 (front end).
+Last updated 2026-08-28 (buildout estimates).
 
 ## Current state in one paragraph
 
@@ -78,6 +78,17 @@ DB. Every planned piece now exists end to end.
   `active_companies()` checks the LATEST status event, not mere existence
   of one — needed because Humanigen (formerly KaloBios) went bankrupt
   twice, 2015 and 2024, with a real operating period between.
+- `estimates.json` — **the durable source of truth for hand-researched
+  estimates**, the counterpart to companies.json. `{catalyst_estimates: [],
+  buildout_estimates: []}`, each row `{cik, as_of_date, p10/p50/p90_date,
+  basis}`. Created 2026-08-28 after noticing that estimates existed ONLY in
+  catalyst.db — which is gitignored and documented as regenerable — so any
+  rebuild silently destroyed the one artifact a human produced by reading
+  filings. `bulk_import.import_estimates()` UPSERTs on (cik, as_of_date);
+  deliberately not the delete-sync used for status events, because an
+  estimate is a dated research record and a later one must append beside
+  the one it supersedes rather than overwrite it (invariant 1). Deleting an
+  estimate is a manual act, never a side effect of editing the seed.
 - `companies.json` — **the durable source of truth for the universe**.
   Array of `{cik, name, status_events: [{effective_date, status}]}`.
   Empty status_events = active/survivor.
@@ -295,9 +306,49 @@ without new filings):
   happened (~$90M/qtr diversified, Lanteris/ex-Maxar acquired 2026-01).
   Revisit if a filing ever dates the relay service start.
 
-buildout_estimates (the maturity-override table) is still EMPTY — the
-"materiality" column in the ranking reads from it, so it shows "no
-estimate on file" for everything.
+buildout_estimates (the maturity-override table) has ONE row as of
+2026-08-28:
+
+- Voyager (0001788060): p10=2031-12-31 / p50=2034-06-30 / p90=2039-12-31,
+  Starlab full operational capability. 10-K accn 0001628280-26-016543 +
+  10-Q accn 0001628280-26-052292. Company says $2.8-3.3B program, launch
+  anticipated 2029, revenue in the first full year of operation. The
+  independent build-rate check is what set the range (the CLAUDE.md
+  archetype): construction in progress $37.3M (2024-12-31) -> $143.9M
+  (2025-12-31) -> $193.5M (2026-06-30), i.e. ~$100M/yr against a $2.8B+
+  program, so ~6-7% of the low-end cost is in the ground and a 2029 launch
+  is unreachable at the observed rate. The Nanoracks $217.5M milestone
+  funding is now FULLY DRAWN ("All milestone payments have now been earned
+  as of June 30, 2026") and NASA Phase II CLD is still uncompeted, so the
+  required funding step-change is unsecured. Every percentile is later
+  than Voyager's own catalyst estimate by construction — revenue precedes
+  full buildout.
+  Verified: p50 is in the future, so the calendar override does NOT fire
+  and Voyager's stage is unchanged at 2-5; the row is invisible at
+  as_of=2026-08-27.
+
+DELIBERATELY no BUILDOUT estimate for NextNav (checked 2026-08-28,
+10-K accn 0001554855-26-000328 — don't re-litigate without new filings).
+NextNav has no company-owned asset base under construction:
+- "we anticipate the capital expenditures associated with the network
+  deployment will be associated with our future 5G partnerships"
+- "Our plans to deploy NextGen with one or more network partners could
+  result in minimal capital expenditures by us"
+- "We anticipate that the radio network infrastructure will be deployed
+  by, and the broadband services operated by those operators"
+Its OWN network is already built ("Our TerraPoiNT network is deployed,
+operated, and maintained by us"; Pinnacle nationwide via AT&T
+co-location; FCC accepted build-out showings for 78 of 154 LMS licenses
+2023-04-17/18), and the financials agree — network under construction
+$582K at 2025-12-31, DOWN from $1,664K, with gross PNT network shrinking
+too. So the future buildout is a partner's capex program gated on a
+rulemaking with no NPRM.
+Recording it as already-complete was considered and rejected by the user
+after the consequence was probed on a scratch DB: a past-dated p50 fires
+the calendar override and makes NextNav stage 5-5
+"past_buildout_estimate(2023-04-18)" — i.e. MATURE — while its own
+catalyst estimate says material revenue is still ~3 years out. The two
+would contradict each other.
 
 ## Where the ranking stands (2026-08-26)
 
@@ -323,8 +374,9 @@ excludes them. Their value is survivorship-correct backtests
 5. ~~Front end~~ — done, React/Vite/TS generated against `/openapi.json`
 
 Nothing on the original sequence is left. Candidates for what's next, none
-started: populating `buildout_estimates` (still empty, so "materiality"
-reads "no estimate on file" everywhere); the 2,440-row concept_conflicts
+started: more `buildout_estimates` rows (only Voyager so far, so
+"materiality" still reads "no estimate on file" for everything else); the
+2,440-row concept_conflicts
 sampling pass; extending the universe beyond space + biotech (semis, AI
 infra); real multi-user deployment (auth, hosting) if it's going to be
 shared beyond a local process.

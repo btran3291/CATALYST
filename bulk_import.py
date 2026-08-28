@@ -5,7 +5,9 @@ from db import get_connection, init_db
 from ingest_sec import ingest
 
 DEFAULT_SEED_PATH = "companies.json"
+DEFAULT_ESTIMATES_PATH = "estimates.json"
 DEFAULT_CANONICAL_CONCEPTS = ["revenue"]
+ESTIMATE_TABLES = ("catalyst_estimates", "buildout_estimates")
 
 
 def load_seed(path: str) -> list[dict]:
@@ -58,6 +60,47 @@ def import_company(db_path: str, entry: dict, canonical_concepts: list[str]) -> 
         return {"cik": cik, "name": name, "ok": False, "error": f"{type(e).__name__}: {e}"}
 
 
+def import_estimates(db_path: str, path: str = DEFAULT_ESTIMATES_PATH) -> dict[str, int]:
+    """Load hand-researched catalyst/buildout estimates from the seed file.
+
+    These exist as a file rather than only in the database because
+    catalyst.db is gitignored and documented as regenerable: without this,
+    rebuilding the database silently destroys the one artifact in the project
+    that a human produced by reading filings.
+
+    UPSERT on (cik, as_of_date), not the delete-then-insert SYNC used for
+    status events. An estimate is a dated research record: correcting a typo
+    in a row should propagate, and adding a new-dated estimate should append
+    beside the old one (invariant 1 — a later estimate never overwrites the
+    earlier one it supersedes). Deleting is left as a deliberate manual act
+    rather than a side effect of editing this file.
+    """
+    with open(path) as f:
+        seed = json.load(f)
+
+    counts = {}
+    conn = get_connection(db_path)
+    for table in ESTIMATE_TABLES:
+        rows = seed.get(table, [])
+        for r in rows:
+            conn.execute(
+                f"""
+                INSERT INTO {table} (cik, as_of_date, p10_date, p50_date, p90_date, basis)
+                VALUES (:cik, :as_of_date, :p10_date, :p50_date, :p90_date, :basis)
+                ON CONFLICT (cik, as_of_date) DO UPDATE SET
+                    p10_date = excluded.p10_date,
+                    p50_date = excluded.p50_date,
+                    p90_date = excluded.p90_date,
+                    basis    = excluded.basis
+                """,
+                r,
+            )
+        counts[table] = len(rows)
+    conn.commit()
+    conn.close()
+    return counts
+
+
 def bulk_import(
     db_path: str, seed_path: str = DEFAULT_SEED_PATH, canonical_concepts: list[str] = None
 ) -> list[dict]:
@@ -86,3 +129,5 @@ if __name__ == "__main__":
     seed_path = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_SEED_PATH
     init_db("catalyst.db")
     bulk_import("catalyst.db", seed_path)
+    counts = import_estimates("catalyst.db")
+    print(f"estimates: " + ", ".join(f"{k}={v}" for k, v in counts.items()))
