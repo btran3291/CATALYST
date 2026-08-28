@@ -4,7 +4,7 @@ Restart prompt: paste this file's contents (or point Claude at it) to resume.
 Read CLAUDE.md first for the project's non-negotiable invariants — this file
 covers what's been built and what's mid-flight, not the design philosophy.
 
-Last updated 2026-08-28 (buildout estimates).
+Last updated 2026-08-28 (buildout estimates: Voyager, Satellogic).
 
 ## Current state in one paragraph
 
@@ -306,7 +306,7 @@ without new filings):
   happened (~$90M/qtr diversified, Lanteris/ex-Maxar acquired 2026-01).
   Revisit if a filing ever dates the relay service start.
 
-buildout_estimates (the maturity-override table) has ONE row as of
+buildout_estimates (the maturity-override table) has TWO rows as of
 2026-08-28:
 
 - Voyager (0001788060): p10=2031-12-31 / p50=2034-06-30 / p90=2039-12-31,
@@ -326,6 +326,35 @@ buildout_estimates (the maturity-override table) has ONE row as of
   Verified: p50 is in the future, so the calendar override does NOT fire
   and Voyager's stage is unchanged at 2-5; the row is invisible at
   as_of=2026-08-27.
+
+- Satellogic (0001874315): p10=2027-06-30 / p50=2028-06-30 /
+  p90=2030-12-31, Merlin constellation fully operational. 10-K accn
+  0001874315-26-000013 + 10-Q accn 0001874315-26-000032. Company says
+  Merlin.01 launches Q4 2026 and Merlin is "fully operational in the first
+  half of 2027", reaffirmed verbatim in the 10-Q filed three weeks before
+  the estimate, and Merlin "is fully funded by existing customer
+  contracts".
+  **First use of third-party asset verification in this project** (the
+  CLAUDE.md rule, previously unexercised): CelesTrak GP catalog queried
+  2026-08-28 returns 19 NUSAT-* objects with fresh epochs, exactly matching
+  the 10-K's "19 NewSat satellites in orbit". Highest is NUSAT-54 with gaps
+  at 27-32, 34, 36, 43, 46 — so 19 of ~30 launched, attrition is real, and
+  the company count is NOT inflated. Watch out: SNUSAT-2 is an unrelated
+  Korean cubesat that matches a naive NAME=NUSAT query and must be excluded.
+  Build rate CONFIRMS the schedule rather than contradicting it (the
+  opposite of Voyager): satellites under construction $14.8M -> $24.9M in
+  H1 2026 (+68%), capex $11.2M vs $2.7M year over year (4.2x). That is why
+  p10 sits at the company's own date instead of well past it.
+  Countervailing, and the reason p50 is a year out: the Q4 2026 first
+  launch had not flown, "fully operational" needs multiple launches plus
+  months-long commissioning, and Satellogic SELLS satellites out of the
+  operational fleet ($12M sovereign-defense sale 2026-04-30, $8.3M cash in
+  H1; "Satellites and other equipment" fell $32.1M -> $28.4M).
+  **CONSEQUENCE TO DIARISE**: Satellogic is NOT left-censored (stage 2-2),
+  so unlike Voyager this row WILL flip it to stage 5 "mature" the moment
+  2028-06-30 passes — verified on a scratch DB by backdating the p50, which
+  produced stage 5-5 past_buildout_estimate. Revisit before mid-2028
+  rather than letting the calendar decide unattended.
 
 DELIBERATELY no BUILDOUT estimate for NextNav (checked 2026-08-28,
 10-K accn 0001554855-26-000328 — don't re-litigate without new filings).
@@ -374,7 +403,7 @@ excludes them. Their value is survivorship-correct backtests
 5. ~~Front end~~ — done, React/Vite/TS generated against `/openapi.json`
 
 Nothing on the original sequence is left. Candidates for what's next, none
-started: more `buildout_estimates` rows (only Voyager so far, so
+started: more `buildout_estimates` rows (Voyager and Satellogic so far, so
 "materiality" still reads "no estimate on file" for everything else); the
 2,440-row concept_conflicts
 sampling pass; extending the universe beyond space + biotech (semis, AI
