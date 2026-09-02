@@ -4,7 +4,7 @@ Restart prompt: paste this file's contents (or point Claude at it) to resume.
 Read CLAUDE.md first for the project's non-negotiable invariants — this file
 covers what's been built and what's mid-flight, not the design philosophy.
 
-Last updated 2026-08-28 (buildout estimates: Voyager, Satellogic).
+Last updated 2026-09-01 (buildout estimates: Voyager, Satellogic).
 
 ## Current state in one paragraph
 
@@ -355,6 +355,46 @@ buildout_estimates (the maturity-override table) has TWO rows as of
   2028-06-30 passes — verified on a scratch DB by backdating the p50, which
   produced stage 5-5 past_buildout_estimate. Revisit before mid-2028
   rather than letting the calendar decide unattended.
+
+WHEN buildout_estimates APPLIES AT ALL (rule made explicit 2026-09-01
+after the Momentus pass, so the next one doesn't have to rediscover it):
+only for a company ACCUMULATING AN ASSET BASE TOWARD A DEFINED COMPLETE
+STATE. The tell is a growing construction-in-progress (or equivalent) line
+plus a stated target for what "complete" means. Voyager (CIP $193.5M,
+Starlab) and Satellogic (satellites under construction $24.9M, Merlin)
+qualify. NextNav (the buildout is a partner's capex) and Momentus (sells
+missions; vehicles are consumed, not accumulated) do not — and for those
+the honest output is no row, not a softer range. A fabricated p50 is worse
+than an absent one here because it eventually fires the stage-5 calendar
+override.
+
+DELIBERATELY no BUILDOUT estimate for Momentus (checked 2026-09-01;
+10-K accn 0001628280-26-022291, 10-Q accn 0001628280-26-055624 — don't
+re-litigate without a change of business model, not merely new filings).
+Momentus sells MISSIONS, not capacity: build one Orbital Service Vehicle,
+fly it, it deorbits. There is no accumulating asset base to complete.
+- Total property, machinery and equipment NET = $464K at 2026-06-30, down
+  from $953K; GROSS fell $5,251K -> $1,441K as leasehold improvements and
+  machinery were disposed. For scale, Voyager's CIP is $193.5M and
+  Satellogic's satellites under construction $24.9M — three orders of
+  magnitude apart.
+- No construction-in-progress line item exists at all.
+- Zero matches in the whole 10-K for any target fleet size / constellation
+  count. The forward statement is "We plan to EVENTUALLY operate a family
+  of progressively larger and more capable OSVs" — no date, no count.
+- CelesTrak 2026-09-01 confirms the consumption model: only VIGORIDE-3, -5,
+  -7 tracked (plus MOMENTUS-X1), not an accumulating fleet.
+- The only dated forward item is a MISSION, not a buildout: "The Company
+  plans to launch its Vigoride 8 mission in 2027 carrying two payloads for
+  NASA under contracts it has been awarded."
+Momentus is stage 2-2 and NOT left-censored, so an invented p50 would
+eventually mark a company with $25K of quarterly revenue as mature.
+Context if revisited: cash $107.6M at 2026-06-30 (much improved; no
+substantial-doubt conclusion in the latest 10-Q, the 10-K's going-concern
+mention is a risk-factor bullet), revenue $0-3.2M and erratic across six
+years with no trend. A CATALYST estimate anchored on the contracted
+Vigoride 8 / NASA 2027 mission was offered and declined as too thin —
+one contracted mission is weak evidence for a distribution.
 
 DELIBERATELY no BUILDOUT estimate for NextNav (checked 2026-08-28,
 10-K accn 0001554855-26-000328 — don't re-litigate without new filings).
