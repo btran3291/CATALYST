@@ -4,7 +4,7 @@ Restart prompt: paste this file's contents (or point Claude at it) to resume.
 Read CLAUDE.md first for the project's non-negotiable invariants — this file
 covers what's been built and what's mid-flight, not the design philosophy.
 
-Last updated 2026-09-01 (buildout estimates: Voyager, Satellogic).
+Last updated 2026-09-01 (buildout estimates: Voyager, Satellogic, AST).
 
 ## Current state in one paragraph
 
@@ -306,8 +306,8 @@ without new filings):
   happened (~$90M/qtr diversified, Lanteris/ex-Maxar acquired 2026-01).
   Revisit if a filing ever dates the relay service start.
 
-buildout_estimates (the maturity-override table) has TWO rows as of
-2026-08-28:
+buildout_estimates (the maturity-override table) has THREE rows as of
+2026-09-01:
 
 - Voyager (0001788060): p10=2031-12-31 / p50=2034-06-30 / p90=2039-12-31,
   Starlab full operational capability. 10-K accn 0001628280-26-016543 +
@@ -355,6 +355,45 @@ buildout_estimates (the maturity-override table) has TWO rows as of
   2028-06-30 passes — verified on a scratch DB by backdating the p50, which
   produced stage 5-5 past_buildout_estimate. Revisit before mid-2028
   rather than letting the calendar decide unattended.
+
+- AST SpaceMobile (0001780312): p10=2028-12-31 / p50=2030-06-30 /
+  p90=2034-12-31, Continuous SpaceMobile Service at ~90 BlueBird
+  satellites. 10-K accn 0001780312-26-000006 + 10-Q accn
+  0001193125-26-342550. The company defines the complete state itself:
+  ~45-60 BB satellites for key-market coverage, ~90 for "Continuous
+  SpaceMobile Service in all targeted geographical markets" (= "close to
+  100% reliable persistent service"), with more beyond 90 for enhancement,
+  so 90 is a floor.
+  **THE FIRST ROW THAT ACTUALLY CHANGED AN ANSWER.** AST read stage 5-5
+  "mature" via the streak-break fallback (max_streak=4) — plainly wrong for
+  a company mid-buildout whose revenue went $1.9M/qtr (2024) to $31.5M/qtr
+  (2026). The calendar override replaces that: AST is now stage 2-5, and
+  the whole tail of the series re-read (2025-06-30 onward was 5-5, now
+  2-5/3-5). It will not read mature again until 2030-06-30 — revisit first.
+  **CelesTrak naming trap**: a NAME=BLUEBIRD query returns ZERO and would
+  read as "no constellation". The catalog names them SPACEMOBILE-nnn.
+  Verified 2026-09-01: 12 operational (SPACEMOBILE-001..006, 008..013, all
+  53.0 deg), plus BLUEWALKER-3 (the prototype, catalogued separately) and 5
+  "SPACEMOBILE-00n DEB" debris objects from Block 1 array deployments. The
+  missing 007 is real — the 10-Q reports BB7 was left in too low an orbit
+  by the New Glenn 3 upper stage on 2026-04-19 and de-orbited ($21.6M
+  insurance received).
+  CADENCE vs PLAN is what set the range: the 10-K planned "45 to 60 Block 2
+  BB satellites by the end of 2026"; with four months left there are 7 —
+  a 6-8x miss on a one-year plan, NOT revised in the August 10-Q. Recent
+  cadence is far better than the annual average (6 satellites in July and
+  August 2026, ~3/month) but has held for two months, not two years.
+  Build rate and funding are NOT the constraint: CIP $1,122.0M -> $1,724.1M
+  in H1 2026 (+$602M), cash capex $859.2M vs $430.6M year over year, cash
+  and restricted cash $2.7B. Satellites are being built faster than flown;
+  launch capacity binds. But ~$1.7B/yr capex against $2.7B cash means more
+  financing is needed before 90 are up.
+  78 satellites remain: ~26 months at 3/month, ~39 at 2/month.
+  KNOWN LIMITATION: this fixed the maturity error but AST is still ABSENT
+  from the ranking, because left-censoring keeps stage_max=5 and the
+  ranking filters stage_max <= 2. The escape hatch is the usual one — a
+  hand-entered catalyst estimate. Not written; nobody has done that
+  filing work yet.
 
 WHEN buildout_estimates APPLIES AT ALL (rule made explicit 2026-09-01
 after the Momentus pass, so the next one doesn't have to rediscover it):
@@ -443,7 +482,8 @@ excludes them. Their value is survivorship-correct backtests
 5. ~~Front end~~ — done, React/Vite/TS generated against `/openapi.json`
 
 Nothing on the original sequence is left. Candidates for what's next, none
-started: more `buildout_estimates` rows (Voyager and Satellogic so far, so
+started: more `buildout_estimates` rows (Voyager, Satellogic and AST so
+far, so
 "materiality" still reads "no estimate on file" for everything else); the
 2,440-row concept_conflicts
 sampling pass; extending the universe beyond space + biotech (semis, AI
