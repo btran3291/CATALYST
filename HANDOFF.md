@@ -4,7 +4,7 @@ Restart prompt: paste this file's contents (or point Claude at it) to resume.
 Read CLAUDE.md first for the project's non-negotiable invariants — this file
 covers what's been built and what's mid-flight, not the design philosophy.
 
-Last updated 2026-09-02 (AST catalyst estimate; AST buildout basis corrected).
+Last updated 2026-09-02 (AST catalyst estimate; Satellogic catalyst declined).
 
 ## Current state in one paragraph
 
@@ -324,6 +324,47 @@ each row's basis column:
   percentile, which is correct. **Effect: AST entered the ranking at #1**
   (nearest p50 in the estimate-backed tier) and is the first company with
   both estimate types on file.
+
+DELIBERATELY no CATALYST estimate for Satellogic (checked 2026-09-02;
+10-K accn 0001874315-26-000013, 10-Q accn 0001874315-26-000032). Two
+independent reasons:
+1. Its revenue inflection is HAPPENING, not ahead — the Firefly precedent.
+   Q2 2026 revenue $15.9M vs $4.4M a year earlier (3.6x); H1 $22.0M vs
+   $7.8M; service revenue alone $7.58M vs $4.44M (+71%). Backed by real
+   contracts: the $8.3M in-orbit satellite sale, an $18M CEiiA agreement
+   (Dec 2025), Vantor/Maxar distribution, Suhora for India/Nepal.
+2. Writing one would CONFLATE THE TWO TABLES. Satellogic's only dated
+   forward milestone is Merlin (fully operational H1 2027 per the company;
+   one contract has "revenue on the contract expected in 2027"), and the
+   buildout row already encodes that exact event. schema.sql says the
+   tables are "deliberately separate ... so the two milestones can't get
+   conflated under one p10/p50/p90" — a Merlin-anchored catalyst would be
+   the same event recorded twice with two distributions.
+
+THE TEST THAT SEPARATES THIS FROM AST (worth reusing): *is today's revenue
+the business model, or a precursor to it?* AST's $31.5M/qtr is gateway
+hardware sold TO the MNOs, and service revenue cannot be recognized until
+network access is provided — precursor, so a catalyst estimate applies.
+Satellogic's 10-K says Space Systems satellite sales "will reflect the
+majority of our revenue for the next two to three years" — that IS the
+model, so it does not.
+Noted for a future revisit rather than acted on: $15.2M of Q2's $15.9M was
+recognized at a POINT IN TIME, so the business is still lumpy one-off
+sales rather than recurring. A catalyst anchored on recurring/over-time
+revenue becoming material would be genuinely distinct from "Merlin
+operational" — it was offered and declined as too thin on timing evidence,
+and it would sit later than the buildout p50, inverting the usual
+catalyst-before-buildout ordering.
+
+Also checked 2026-09-02 and NOT material to either Satellogic estimate:
+the three most recent 8-Ks are CFO transition (Rick Dunn stepped down
+effective 2026-08-21, Dustin Greer interim, search ongoing) and the Q2
+earnings furnish. No Merlin program news. Worth knowing there is CFO
+turnover during a capital-intensive buildout, but it changes no dates.
+One ambiguity resolved while checking: the 10-K's "NextGen is expected to
+be operational in 2028" refers to the NextGen PLATFORM (a Space Systems
+product line introduced October 2025), NOT Merlin — Merlin remains H1
+2027, so the buildout row's premise is intact.
 
 DELIBERATELY no estimate (checked filings 2026-08-25, don't re-litigate
 without new filings):
