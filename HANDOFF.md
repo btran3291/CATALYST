@@ -4,7 +4,7 @@ Restart prompt: paste this file's contents (or point Claude at it) to resume.
 Read CLAUDE.md first for the project's non-negotiable invariants — this file
 covers what's been built and what's mid-flight, not the design philosophy.
 
-Last updated 2026-09-01 (buildout estimates: Voyager, Satellogic, AST).
+Last updated 2026-09-02 (AST catalyst estimate; AST buildout basis corrected).
 
 ## Current state in one paragraph
 
@@ -290,6 +290,41 @@ each row's basis column:
   first full year of operation; $2.8-3.3B cost vs $34.3M grant money
   remaining; CDR incomplete; NASA Phase II CLD not yet competed.
 
+- AST SpaceMobile (0001780312): p10=2027-06-30 / p50=2028-09-30 /
+  p90=2031-12-31, as_of 2026-09-02. Material SpaceMobile Service revenue —
+  the recurring MNO service, NOT today's gateway hardware and government
+  engineering. 10-K accn 0001780312-26-000006 + 10-Q accn
+  0001193125-26-342550.
+  **Why a catalyst estimate applies to a company already booking $31.5M a
+  quarter**: Q2 2026 splits $24.4M products / $7.1M services, and products
+  is gateway equipment sold TO the MNOs. Service revenue has not begun —
+  "Revenue for the SpaceMobile Service will be recognized over the life of
+  the contract, beginning when the Company provides MNOs access to its
+  satellite network." So the business model is entirely ahead of the
+  reported revenue. This is the INVERSE of the Firefly non-estimate: there
+  the inflection was already happening; here the visible ramp is precursor
+  hardware.
+  Demand is not the constraint — definitive agreements with Verizon, AT&T,
+  Vodafone, SatCo and a ten-year STC deal; 60+ MNO partnerships covering
+  3B+ subscribers; ~$1.2B of remaining performance obligations; and a
+  $45.0M Verizon commercial payment DUE as of the 10-Q, both its conditions
+  met (definitive agreement 2025-10-08; "On April 22, 2026, we received
+  certain regulatory approvals for our SpaceMobile Service"). That payment
+  is an advance in contract liabilities — cash now, revenue when network
+  access is provided, which is the timing being estimated.
+  Constraints are satellites and the REMAINING FCC grant: "Before we begin
+  providing full commercial service in the United States, we will need a
+  grant of the remaining aspects of our Modification Application" (the
+  August 2025 grant was partial — 20 satellites plus TT&C); non-US markets
+  need separate approvals each. Mitigating: a "phased satellite deployment
+  plan and a corresponding commercial launch plan ... designed to minimize
+  the capital required to initiate and operate commercial" service, so
+  revenue starts in prioritized markets well before ~90 satellites.
+  Ordering is earlier than AST's own buildout p50 (2030-06-30) at every
+  percentile, which is correct. **Effect: AST entered the ranking at #1**
+  (nearest p50 in the estimate-backed tier) and is the first company with
+  both estimate types on file.
+
 DELIBERATELY no estimate (checked filings 2026-08-25, don't re-litigate
 without new filings):
 - Firefly: no Eclipse first-launch date stated anywhere in 10-Q or the
@@ -380,7 +415,14 @@ buildout_estimates (the maturity-override table) has THREE rows as of
   insurance received).
   CADENCE vs PLAN is what set the range: the 10-K planned "45 to 60 Block 2
   BB satellites by the end of 2026"; with four months left there are 7 —
-  a 6-8x miss on a one-year plan, NOT revised in the August 10-Q. Recent
+  a 6-8x miss on a one-year plan. **CORRECTION (2026-09-02)**: this
+  originally said the target was not revised in the August 10-Q. It WAS —
+  the 10-Q revises the timing to "targeting approximately 45 BB satellites
+  in early 2027" (the 45-60 / ~90 target STATES are unchanged). The first
+  extraction pass caught the unchanged target-state sentence and missed the
+  revised-timing one. The percentiles are unchanged, because they were set
+  by cadence arithmetic: even the revised figure needs ~5.5 satellites/month
+  from 12 on orbit, versus ~3/month observed at best. Recent
   cadence is far better than the annual average (6 satellites in July and
   August 2026, ~3/month) but has held for two months, not two years.
   Build rate and funding are NOT the constraint: CIP $1,122.0M -> $1,724.1M
@@ -389,11 +431,9 @@ buildout_estimates (the maturity-override table) has THREE rows as of
   launch capacity binds. But ~$1.7B/yr capex against $2.7B cash means more
   financing is needed before 90 are up.
   78 satellites remain: ~26 months at 3/month, ~39 at 2/month.
-  KNOWN LIMITATION: this fixed the maturity error but AST is still ABSENT
-  from the ranking, because left-censoring keeps stage_max=5 and the
-  ranking filters stage_max <= 2. The escape hatch is the usual one — a
-  hand-entered catalyst estimate. Not written; nobody has done that
-  filing work yet.
+  (The "AST is absent from the ranking" limitation noted here on
+  2026-09-01 was resolved the next day by the catalyst estimate below,
+  which is exactly the documented escape hatch for left-censoring.)
 
 WHEN buildout_estimates APPLIES AT ALL (rule made explicit 2026-09-01
 after the Momentus pass, so the next one doesn't have to rediscover it):
@@ -458,10 +498,11 @@ the calendar override and makes NextNav stage 5-5
 catalyst estimate says material revenue is still ~3 years out. The two
 would contradict each other.
 
-## Where the ranking stands (2026-08-26)
+## Where the ranking stands (2026-09-02)
 
-101 entries: 66 fresh, 35 stale. Top: NextNav (stage 3-5, p50
-2029-12-31), Voyager (stage 2-5, p50 2032-06-30), then momentum-only —
+102 entries. Estimate-backed tier, by nearest catalyst p50: AST SpaceMobile
+(stage 2-5, p50 2028-09-30), NextNav (stage 3-5, p50 2029-12-31), Voyager
+(stage 2-5, p50 2032-06-30). Then momentum-only —
 Satellogic, Actinium ($35M/qtr), BioLineRx, Evolus ($84M/qtr),
 Organogenesis ($44M/qtr), IDEAYA, Invivyd, Pelthos, Momentus, and the
 stage-0-1 pre-revenue cohort (Rocket Pharma, Annovis, TuHURA, Oruka…).
